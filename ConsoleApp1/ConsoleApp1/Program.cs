@@ -57,6 +57,23 @@ namespace ConsoleApp1
             return number == thingy;
         }
 
+
+        public static byte GetNthByte(uint number, int byteIndex)
+        {
+            int mask = 0xFF;
+            int bitIndex = byteIndex * 8;
+            mask = mask << bitIndex;
+
+            return (byte)((number & mask) >> bitIndex);
+        }
+
+        public static byte[] GetBytes(uint number)
+        {
+            byte[] array = { GetNthByte(number, 0), GetNthByte(number, 1), GetNthByte(number, 2), GetNthByte(number, 3) };
+
+            return array;
+        }
+
         public static int SetBit(int number, int bit, bool whatToSetItTo)
         {
             int mask;
@@ -80,16 +97,48 @@ namespace ConsoleApp1
             return number;
         }
 
+
+        public static int DoMath(uint data)
+        {
+            byte[] bytes = GetBytes(data);
+
+            switch (bytes[3])
+            {
+                case 1:
+                    return bytes[3] + bytes[2];
+                    break;
+
+                case 2:
+                    int negative = bytes[2] * -1;
+                    return bytes[3] + negative;
+                    break;
+
+                case 3:
+                    int product = 0;
+                    for (int i = 0; i < bytes[2]; i++)
+                    {
+                        product += bytes[3];
+                    }
+                    break;
+
+                case 4:
+                    int quotient = 0;
+                    int remainder = bytes[2];
+                    while (remainder >= bytes[3])
+                    {
+                        remainder -= bytes[3];
+                        quotient++;
+                    }
+                    return quotient;
+                    break;
+            }
+
+            return 0;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine(IsPowerOf2(1));
-            Console.WriteLine(IsPowerOf2(0));
-            Console.WriteLine(IsPowerOf2(7));
-            Console.WriteLine(IsPowerOf2(16));
-            Console.WriteLine(IsPowerOf2(64));
-            Console.WriteLine(IsPowerOf2(3));
-            Console.WriteLine(IsPowerOf2(27));
-            Console.WriteLine(IsPowerOf2(5));
+            
         }
     }
 }

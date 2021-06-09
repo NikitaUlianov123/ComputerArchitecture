@@ -40,5 +40,56 @@ namespace XUnitTest
         {
             Assert.True(Program.IsPowerOf2(Program.NearestPowerOf2(number)));
         }
+
+        [Fact]
+        public void SetBitWorks()
+        {
+            Assert.True(true);
+        }
+
+
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(1, 5)]
+        [InlineData(7, 2)]
+        public void DoMathAdds(uint number, uint otherNumber)
+        {
+            uint input = 0x01000000;
+            uint inputNumber = number << 16;
+            input += inputNumber;
+            inputNumber = otherNumber << 8;
+            input += otherNumber;
+            Assert.True(Program.DoMath(input) == number + otherNumber);
+        }
+
+        [Theory]
+        [InlineData(5, 3)]
+        //[InlineData(1)]
+        //[InlineData(3)]
+        public void DoMathSubtracts(uint number, uint otherNumber)
+        {
+            uint input = 01;
+            Assert.True(Program.DoMath(input) == number + otherNumber);
+        }
+
+        [Theory]
+        [InlineData(0, 0)]
+        //[InlineData(1)]
+        //[InlineData(3)]
+        public void DoMathMultiplies(uint number, uint otherNumber)
+        {
+            uint input = 01;
+            Assert.True(Program.DoMath(input) == number + otherNumber);
+        }
+
+        [Theory]
+        [InlineData(0, 0)]
+        //[InlineData(1)]
+        //[InlineData(3)]
+        public void DoMathDivides(uint number, uint otherNumber)
+        {
+            uint input = 01;
+            Assert.True(Program.DoMath(input) == number + otherNumber);
+        }
     }
 }

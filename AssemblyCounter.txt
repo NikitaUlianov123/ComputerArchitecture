@@ -1,0 +1,8 @@
+10 set R0 0
+20 set R1 1
+25 set R5 (whatever number you want to count to)
+30 add R0 R1 R0
+35 eq R0 R1 R3
+26 breq R3 45
+40 goto 30
+45
