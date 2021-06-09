@@ -54,42 +54,78 @@ namespace XUnitTest
         [InlineData(7, 2)]
         public void DoMathAdds(uint number, uint otherNumber)
         {
-            uint input = 0x01000000;
+            uint input = 1;
+            input = input << 24;
+
             uint inputNumber = number << 16;
+
             input += inputNumber;
-            inputNumber = otherNumber << 8;
-            input += otherNumber;
+
+            uint otherInputNumber = otherNumber << 8;
+
+            input += otherInputNumber;
+
             Assert.True(Program.DoMath(input) == number + otherNumber);
         }
 
         [Theory]
         [InlineData(5, 3)]
-        //[InlineData(1)]
-        //[InlineData(3)]
+        [InlineData(1, 1)]
+        [InlineData(10, 8)]
         public void DoMathSubtracts(uint number, uint otherNumber)
         {
-            uint input = 01;
-            Assert.True(Program.DoMath(input) == number + otherNumber);
+            uint input = 2;
+            input = input << 24;
+
+            uint inputNumber = number << 16;
+
+            input += inputNumber;
+
+            uint otherInputNumber = otherNumber << 8;
+
+            input += otherInputNumber;
+
+            Assert.True(Program.DoMath(input) == number - otherNumber);
         }
 
         [Theory]
-        [InlineData(0, 0)]
-        //[InlineData(1)]
-        //[InlineData(3)]
+        [InlineData(1, 1)]
+        [InlineData(3, 7)]
+        [InlineData(11, 14)]
         public void DoMathMultiplies(uint number, uint otherNumber)
         {
-            uint input = 01;
-            Assert.True(Program.DoMath(input) == number + otherNumber);
+            uint input = 3;
+            input = input << 24;
+
+            uint inputNumber = number << 16;
+
+            input += inputNumber;
+
+            uint otherInputNumber = otherNumber << 8;
+
+            input += otherInputNumber;
+
+            Assert.True(Program.DoMath(input) == number * otherNumber);
         }
 
         [Theory]
-        [InlineData(0, 0)]
-        //[InlineData(1)]
-        //[InlineData(3)]
+        [InlineData(5, 5)]
+        [InlineData(3, 2)]
+        [InlineData(5, 1)]
         public void DoMathDivides(uint number, uint otherNumber)
         {
-            uint input = 01;
-            Assert.True(Program.DoMath(input) == number + otherNumber);
+            uint input = 4;
+            input = input << 24;
+
+            uint inputNumber = number << 16;
+
+            input += inputNumber;
+
+            uint otherInputNumber = otherNumber << 8;
+
+            input += otherInputNumber;
+
+            Assert.True(Program.DoMath(input) == number / otherNumber);
         }
     }
 }

@@ -69,7 +69,7 @@ namespace ConsoleApp1
 
         public static byte[] GetBytes(uint number)
         {
-            byte[] array = { GetNthByte(number, 0), GetNthByte(number, 1), GetNthByte(number, 2), GetNthByte(number, 3) };
+            byte[] array = { GetNthByte(number, 3), GetNthByte(number, 2), GetNthByte(number, 1), GetNthByte(number, 0) };
 
             return array;
         }
@@ -102,31 +102,32 @@ namespace ConsoleApp1
         {
             byte[] bytes = GetBytes(data);
 
-            switch (bytes[3])
+            switch (bytes[0])
             {
                 case 1:
-                    return bytes[3] + bytes[2];
+                    return bytes[1] + bytes[2];
                     break;
 
                 case 2:
                     int negative = bytes[2] * -1;
-                    return bytes[3] + negative;
+                    return bytes[1] + negative;
                     break;
 
                 case 3:
                     int product = 0;
-                    for (int i = 0; i < bytes[2]; i++)
+                    for (int i = 0; i < bytes[1]; i++)
                     {
-                        product += bytes[3];
+                        product += bytes[2];
                     }
+                    return product;
                     break;
 
                 case 4:
                     int quotient = 0;
-                    int remainder = bytes[2];
-                    while (remainder >= bytes[3])
+                    int remainder = bytes[1];
+                    while (remainder >= bytes[2])
                     {
-                        remainder -= bytes[3];
+                        remainder -= bytes[2];
                         quotient++;
                     }
                     return quotient;
@@ -138,7 +139,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            
+            var test = DoMath(0x03050300);
         }
     }
 }
