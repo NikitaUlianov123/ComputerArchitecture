@@ -160,6 +160,19 @@ namespace ConsoleApp1
             return 0;
         }
 
+        public static sbyte TwosCompliment(byte b)
+        {
+            if (b < 128)
+            {
+                return Convert.ToSByte(b);
+            }
+            else
+            {
+                short x = Convert.ToInt16(b);
+                return Convert.ToSByte(x - 256);
+            }
+        }
+
         public static void Add()
         {
             int number1 = numberStack.Pop();
@@ -169,36 +182,43 @@ namespace ConsoleApp1
 
         public static void Subtract()
         {
-            int number1 = numberStack.Pop();
-            int number2 = numberStack.Pop();
-            number1 *= -1;
-            numberStack.Push(number1 + number2);
+            byte number1 = (byte)numberStack.Pop();
+            byte number2 = (byte)numberStack.Pop();
+            numberStack.Push(number1);
+            numberStack.Push(number2);
+            Add();
         }
 
         public static void Mulitply()
         {
             int number1 = numberStack.Pop();
             int number2 = numberStack.Pop();
-            int product = 0;
+            numberStack.Push(0);
             for (int i = 0; i < number1; i++)
             {
-                product += number2;
+                numberStack.Push(number2);
+                Add();
             }
-            numberStack.Push(product);
         }
 
         public static void Divide()
         {
             int number1 = numberStack.Pop();
             int number2 = numberStack.Pop();
-            int quotient = 0;
-            int remainder = number2;
-            while (remainder >= number1)
+            numberStack.Push(0);
+            while (number2 >= number1)
             {
-                remainder -= number1;
-                quotient++;
+                numberStack.Push(number2);
+                numberStack.Push(number1);
+                Subtract();
+                number2 = numberStack.Pop();
+                numberStack.Push(1);
+                Add();
+                if (number2 > number1)
+                {
+                    numberStack.Push(number2);
+                }
             }
-            numberStack.Push(quotient);
         }
 
         static void Main(string[] args)
