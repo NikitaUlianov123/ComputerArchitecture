@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -97,6 +98,29 @@ namespace ConsoleApp1
             return number;
         }
 
+        public unsafe static bool IsPalindrome(string s)
+        {
+            fixed(char* start = s)
+            {
+                char* end = start + s.Length - 1;
+
+                for (int i = 0; i < s.Length / 2; i++)
+                {
+                    char* current = start + i;
+                    char* otherCurrent = end - i;
+
+                    if (*current != *otherCurrent)
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        }
+
+
+        public static Stack<int> numberStack = new Stack<int>();
 
         public static int DoMath(uint data)
         {
@@ -105,41 +129,81 @@ namespace ConsoleApp1
             switch (bytes[0])
             {
                 case 1:
-                    return bytes[1] + bytes[2];
+                    numberStack.Push(bytes[1]);
+                    numberStack.Push(bytes[2]);
+                    Add();
+                    return numberStack.Pop();
                     break;
 
                 case 2:
-                    int negative = bytes[2] * -1;
-                    return bytes[1] + negative;
+                    numberStack.Push(bytes[1]);
+                    numberStack.Push(bytes[2]);
+                    Subtract();
+                    return numberStack.Pop();
                     break;
 
                 case 3:
-                    int product = 0;
-                    for (int i = 0; i < bytes[1]; i++)
-                    {
-                        product += bytes[2];
-                    }
-                    return product;
+                    numberStack.Push(bytes[1]);
+                    numberStack.Push(bytes[2]);
+                    Mulitply();
+                    return numberStack.Pop();
                     break;
 
                 case 4:
-                    int quotient = 0;
-                    int remainder = bytes[1];
-                    while (remainder >= bytes[2])
-                    {
-                        remainder -= bytes[2];
-                        quotient++;
-                    }
-                    return quotient;
+                    numberStack.Push(bytes[1]);
+                    numberStack.Push(bytes[2]);
+                    Divide();
+                    return numberStack.Pop();
                     break;
             }
 
             return 0;
         }
 
+        public static void Add()
+        {
+            int number1 = numberStack.Pop();
+            int number2 = numberStack.Pop();
+            numberStack.Push(number1 + number2);
+        }
+
+        public static void Subtract()
+        {
+            int number1 = numberStack.Pop();
+            int number2 = numberStack.Pop();
+            number1 *= -1;
+            numberStack.Push(number1 + number2);
+        }
+
+        public static void Mulitply()
+        {
+            int number1 = numberStack.Pop();
+            int number2 = numberStack.Pop();
+            int product = 0;
+            for (int i = 0; i < number1; i++)
+            {
+                product += number2;
+            }
+            numberStack.Push(product);
+        }
+
+        public static void Divide()
+        {
+            int number1 = numberStack.Pop();
+            int number2 = numberStack.Pop();
+            int quotient = 0;
+            int remainder = number2;
+            while (remainder >= number1)
+            {
+                remainder -= number1;
+                quotient++;
+            }
+            numberStack.Push(quotient);
+        }
+
         static void Main(string[] args)
         {
-            var test = DoMath(0x03050300);
+            
         }
     }
 }

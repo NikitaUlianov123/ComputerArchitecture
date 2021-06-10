@@ -49,7 +49,6 @@ namespace XUnitTest
 
 
         [Theory]
-        [InlineData(0, 0)]
         [InlineData(1, 5)]
         [InlineData(7, 2)]
         public void DoMathAdds(uint number, uint otherNumber)
@@ -126,6 +125,18 @@ namespace XUnitTest
             input += otherInputNumber;
 
             Assert.True(Program.DoMath(input) == number / otherNumber);
+        }
+
+
+        [Theory]
+        [InlineData("mom", true)]
+        [InlineData("dad", true)]
+        [InlineData("racecar", true)]
+        [InlineData("fish", false)]
+        [InlineData("bananananananana", false)]
+        public void IsPPalindromeWorks(string text, bool expected)
+        {
+            Assert.True(Program.IsPalindrome(text) == expected);
         }
     }
 }
