@@ -214,10 +214,6 @@ namespace ConsoleApp1
                 number2 = numberStack.Pop();
                 numberStack.Push(1);
                 Add();
-                if (number2 > number1)
-                {
-                    numberStack.Push(number2);
-                }
             }
         }
 
