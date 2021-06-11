@@ -2,6 +2,7 @@ using System;
 
 using Xunit;
 using ConsoleApp1;
+using System.Linq;
 
 namespace XUnitTest
 {
@@ -137,6 +138,19 @@ namespace XUnitTest
         public void IsPPalindromeWorks(string text, bool expected)
         {
             Assert.True(Program.IsPalindrome(text) == expected);
+        }
+
+
+        [Fact]
+
+        public unsafe void ArraySumWorks()
+        {
+            Random random = new Random();
+            int[] array = { 5, 6, 7, 8, 9 };
+            fixed (int* start = array)
+            {
+                Assert.True(Program.ArraySum(start, array.Length) == array.Sum());
+            }
         }
     }
 }

@@ -1,0 +1,24 @@
+generate 100 numbers on a stack and get a sum.
+
+100 set R0 0
+110 set R1 1
+120 set R5 100      //Size of array
+130 set R30 0xFFFF  //Memory location
+140 set R31 0xFFFF  //Moving memory location
+
+200 sub R30 R5 R30  //Allocating the array
+
+250 sub SP R1 SP    //Subtarcting from stack pointerS
+
+300 add R0 R1 R0
+
+
+305 stri R0 R31     //Store R0 at the memory address at R1
+
+310 sub R6 R1 R6    //Subtract 1 from R6
+
+
+350 eq R0 R1 R3
+260 breq R3 450
+400 goto 300
+450 

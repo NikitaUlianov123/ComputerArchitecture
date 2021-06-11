@@ -217,6 +217,22 @@ namespace ConsoleApp1
             }
         }
 
+
+        public unsafe static int ArraySum(int* start, int length)
+        {
+            int sum = 0;
+
+            int* counter = start;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += *counter;
+                counter++;
+            }
+
+            return sum;
+        }
+
         static void Main(string[] args)
         {
             
