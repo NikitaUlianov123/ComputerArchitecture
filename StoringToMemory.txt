@@ -5,17 +5,20 @@ generate 100 numbers on a stack and get a sum.
 120 set R5 100      //Size of array
 130 set R30 0xFFFF  //Memory location
 140 set R31 0xFFFF  //Moving memory location
+150 set R29 0       //Request register
+160 set R28 0       //Value register
 
 200 sub R30 R5 R30  //Allocating the array
 
-250 sub SP R1 SP    //Subtarcting from stack pointerS
+250 sub SP R1 SP    //Subtarcting from stack pointers
 
-300 add R0 R1 R0
+300 add R0 R1 R0    //Adding to the counter
 
+305 set R29 1       //Requesting random
 
-305 stri R0 R31     //Store R0 at the memory address at R1
+335 stri R28 R31     //Store R28 (the result of the random) at the memory address at R1
 
-310 sub R6 R1 R6    //Subtract 1 from R6
+340 sub R6 R1 R6    //Subtract 1 from R6
 
 
 350 eq R0 R1 R3

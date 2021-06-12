@@ -1,0 +1,43 @@
+Registers: //Assuming 32 total registers
+
+R31 - Start of stack
+R30 - Stack pointer
+R29 - Instruction pointer
+
+
+Commands:
+	Math:
+		Add 10
+		Sub 11
+		Mul 12
+		Div 13
+		Mod 14
+
+	Logic:
+		SHL 20 //Shift Left
+		SHR 21 //Shift Right
+		And 22
+		Or  23
+		Xor 24
+		Not 25
+		EQ  26
+
+
+	Flow Control:
+		Goto 30
+		Breq 31
+		Nop  32 //No op
+
+	Memory:
+		Set   40
+		Push  41
+		Pull  42
+		Store 43
+		Load  44
+
+
+Intrinsics:   //Flag register and value register
+
+KeyPressed
+Random
+WriteChar
