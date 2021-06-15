@@ -24,9 +24,10 @@ Commands:
 
 
 	Flow Control:
-		Goto 30
-		Breq 31
-		Nop  32 //No op
+		Goto  30
+		Gotoi 31
+		Breq  35
+		Nop   00 //No op
 
 	Memory:
 		Set   40
