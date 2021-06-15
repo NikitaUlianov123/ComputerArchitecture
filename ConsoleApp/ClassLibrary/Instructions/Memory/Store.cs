@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Logic
+namespace ClassLibrary.Instructions.Memory
 {
-    public class SHR : Instruction
+    public class Store : Instruction
     {
         private string originalAssembly;
         private byte sourceReg;
-        private byte destReg;
+        private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
 
         protected override string OpCodeAsm
-            => "(SHR)";
+            => "(Store)";
 
         protected override byte OpCode
-            => 0x21;
+            => 0x43;
 
         public override byte[] Emit()
         {
@@ -26,8 +26,8 @@ namespace ClassLibrary.Instructions.Logic
             {
                 OpCode,
                 sourceReg,
-                destReg,
-                padding
+                (byte)(memAddress >> 8),
+                (byte)memAddress
             };
         }
 
@@ -36,11 +36,11 @@ namespace ClassLibrary.Instructions.Logic
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new SHR();
+            var instruction = new Store();
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.sourceReg = byte.Parse(match.Groups[2].Value);
-            instruction.destReg = byte.Parse(match.Groups[3].Value);
+            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

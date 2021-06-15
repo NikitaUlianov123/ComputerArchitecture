@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace ClassLibrary.Instructions.Math
 {
-    class Mul : Instruction
+    public class Mul : Instruction
     {
         private string originalAssembly;
         private byte Reg1;

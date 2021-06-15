@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Mamory
+namespace ClassLibrary.Instructions.Flow_Control
 {
-    class Pull : Instruction
+    public class Nop : Instruction
     {
         private string originalAssembly;
-        private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{comments}$";
 
         protected override string OpCodeAsm
-            => "(Push)";
+            => "(Nop)";
 
         protected override byte OpCode
-            => 0x42;
+            => 0x00;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
-                destReg,
+                padding,
                 padding,
                 padding
             };
@@ -35,10 +34,9 @@ namespace ClassLibrary.Instructions.Mamory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Pull();
+            var instruction = new Nop();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.destReg = byte.Parse(match.Groups[2].Value);
 
             return instruction;
         }

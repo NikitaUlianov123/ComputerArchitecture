@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Mamory
+namespace ClassLibrary.Instructions.Flow_Control
 {
-    class Load : Instruction
+    public class GoToi : Instruction
     {
         private string originalAssembly;
         private byte destReg;
-        private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
 
         protected override string OpCodeAsm
-            => "(Load)";
+            => "(Gotoi)";
 
         protected override byte OpCode
-            => 0x44;
+            => 0x31;
 
         public override byte[] Emit()
         {
@@ -26,8 +25,8 @@ namespace ClassLibrary.Instructions.Mamory
             {
                 OpCode,
                 destReg,
-                (byte)(memAddress >> 8),
-                (byte)memAddress
+                padding,
+                padding
             };
         }
 
@@ -36,11 +35,10 @@ namespace ClassLibrary.Instructions.Mamory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Load();
+            var instruction = new GoToi();
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace ClassLibrary.Instructions.Logic
 {
-    class Not : Instruction
+    public class Not : Instruction
     {
         private string originalAssembly;
         private byte sourceReg;

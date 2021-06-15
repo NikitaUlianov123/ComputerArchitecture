@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using ClassLibrary;
 using ClassLibrary.Instructions;
 using ClassLibrary.Instructions.Math;
-using ClassLibrary.Instructions.Mamory;
-
+using ClassLibrary.Instructions.Memory;
+using ClassLibrary.Instructions.Logic;
+using ClassLibrary.Instructions.Flow_Control;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApp
 {
@@ -22,23 +24,52 @@ namespace ConsoleApp
             List<Instruction> possibleInstructions
            = new List<Instruction>()
             {
+               //Memory:
                 new Set(),
-                new Add()
+                new Push(),
+                new Pull(),
+                new Store(),
+                new Load(),
+               //Math:
+                new Add(),
+                new Sub(),
+                new Mul(),
+                new Div(),
+                new Mod(),
+               //Logic:
+                new And(),
+                new Equal(),
+                new Not(),
+                new Or(),
+                new SHL(),
+                new SHR(),
+                new Xor(),
+               //Flow Control:
+                new Breq(),
+                new GoTo(),
+                new GoToi(),
+                new Nop(),
             };
 
-            /*
-             Labels:
+            //label string to line offset
+            Dictionary<string, int> Labels = new Dictionary<string, int>();
 
-            have dictionary <string, byte offset>
-             
-             
-             */
+            string label = @"'^(\w+):";
 
-
+            //First pass:
+            for (int i = 0; i < assembly.Length; i++)
+            {
+                var match = Regex.Match(assembly[i], label);
+                if (match.Success)
+                {
+                    Labels.Add(Convert.ToString(match.Groups[0]), i);
+                }
+            }
 
             List<Instruction> instructions = new List<Instruction>();
             List<byte> machineCode = new List<byte>();
-
+            
+            //Second pass:
             foreach (var line in assembly)
             {
                 bool valid = false;

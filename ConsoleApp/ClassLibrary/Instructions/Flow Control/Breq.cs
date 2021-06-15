@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Logic
+namespace ClassLibrary.Instructions.Flow_Control
 {
-    public class SHR : Instruction
+    public class Breq : Instruction
     {
         private string originalAssembly;
-        private byte sourceReg;
-        private byte destReg;
+        private byte checkReg;
+        private ushort memaddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
 
         protected override string OpCodeAsm
-            => "(SHR)";
+            => "(Breq)";
 
         protected override byte OpCode
-            => 0x21;
+            => 0x35;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
-                sourceReg,
-                destReg,
-                padding
+                checkReg,
+                (byte)(memaddress >> 8),
+                (byte)memaddress
             };
         }
 
@@ -36,11 +36,11 @@ namespace ClassLibrary.Instructions.Logic
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new SHR();
+            var instruction = new Breq();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.sourceReg = byte.Parse(match.Groups[2].Value);
-            instruction.destReg = byte.Parse(match.Groups[3].Value);
+            instruction.checkReg = byte.Parse(match.Groups[2].Value);
+            instruction.memaddress = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

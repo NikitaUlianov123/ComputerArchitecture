@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Mamory
+namespace ClassLibrary.Instructions.Memory
 {
-    public class Set : Instruction
+    public class Pull : Instruction
     {
         private string originalAssembly;
         private byte destReg;
-        private ushort val;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
 
         protected override string OpCodeAsm
-            => "(Set)";
+            => "(Push)";
 
         protected override byte OpCode
-            => 0x40;
+            => 0x42;
 
         public override byte[] Emit()
         {
@@ -26,8 +25,8 @@ namespace ClassLibrary.Instructions.Mamory
             {
                 OpCode,
                 destReg,
-                (byte)(val >> 8),
-                (byte)val
+                padding,
+                padding
             };
         }
 
@@ -36,11 +35,10 @@ namespace ClassLibrary.Instructions.Mamory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Set();
+            var instruction = new Pull();
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
-            instruction.val = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }
