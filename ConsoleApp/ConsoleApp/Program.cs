@@ -16,14 +16,24 @@ namespace ConsoleApp
         {
             string[] assembly = new[]
             {
+                "Label:",
                 "Set R0 42  //comment",
                 "Set R1 50  //comment",
                 "Add R0 R1 R2  //comment",
+                "Yeet:",
+                "Goto Label",
+                "Goto Yeet"
             };
 
             List<Instruction> possibleInstructions
            = new List<Instruction>()
             {
+               //Flow Control:
+                new Breq(),
+                new GoTo(),
+                new GoToi(),
+                new GoToLabels(),
+                new Nop(),
                //Memory:
                 new Set(),
                 new Push(),
@@ -44,25 +54,25 @@ namespace ConsoleApp
                 new SHL(),
                 new SHR(),
                 new Xor(),
-               //Flow Control:
-                new Breq(),
-                new GoTo(),
-                new GoToi(),
-                new Nop(),
             };
 
             //label string to line offset
             Dictionary<string, int> Labels = new Dictionary<string, int>();
 
-            string label = @"'^(\w+):";
+            string label = @"^(\w+):";
 
+            ushort offset = 0;
             //First pass:
             for (int i = 0; i < assembly.Length; i++)
             {
                 var match = Regex.Match(assembly[i], label);
                 if (match.Success)
                 {
-                    Labels.Add(Convert.ToString(match.Groups[0]), i);
+                    Labels.Add(Convert.ToString(match.Groups[1]), offset);
+                }
+                else
+                {
+                    offset += 4;
                 }
             }
 
@@ -72,13 +82,27 @@ namespace ConsoleApp
             //Second pass:
             foreach (var line in assembly)
             {
+                var match = Regex.Match(line, label);
+                if (match.Success) continue;
                 bool valid = false;
                 foreach (var possibleInstruction in possibleInstructions)
                 {
                     if (!(possibleInstruction.Parse(line) is Instruction instruction)) continue;
                     valid = true;
 
-                    instructions.Add(possibleInstruction);
+                    if (possibleInstruction.IsGoToLabels())
+                    {
+                        GoTo instruction2 = new GoTo();
+                        instruction2.memAddress = ushort.Parse(Labels[((GoToLabels)possibleInstruction).Label].ToString());
+
+                        instructions.Add(instruction2);
+                    }
+                    else
+                    {
+
+                        instructions.Add(possibleInstruction);
+                    }
+
 
                     var bytes = instruction.Emit();
                     machineCode.AddRange(bytes);
@@ -92,7 +116,7 @@ namespace ConsoleApp
 
                 if (!valid)
                 {
-                    Console.WriteLine("Invalid assembly");
+                    Console.WriteLine("No");
                     Console.WriteLine("");
                 }
             }

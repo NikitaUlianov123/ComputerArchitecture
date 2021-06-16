@@ -5,27 +5,27 @@ using System.Text.RegularExpressions;
 
 namespace ClassLibrary.Instructions.Flow_Control
 {
-    public class GoTo : Instruction
+    public class GoToLabels : Instruction
     {
         private string originalAssembly;
-        public ushort memAddress;
+        public string Label;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{literalValue}{comments}$";
+            => @"^Goto +(\w+) *(?:\/\/.*)*"; //$"{start}{OpCodeAsm}{space}{label}{comments}$";
 
         protected override string OpCodeAsm
-            => "(GoTo)";
+            => "(Goto)";
 
         protected override byte OpCode
-            => 0x30;
+            => 0x32;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
-                (byte)(memAddress >> 8),
-                (byte)memAddress,
+                padding,
+                padding,
                 padding
             };
         }
@@ -35,12 +35,19 @@ namespace ClassLibrary.Instructions.Flow_Control
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new GoTo();
+            var instruction = new GoToLabels();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.memAddress = ushort.Parse(match.Groups[2].Value);
+            instruction.Label = Convert.ToString(match.Groups[1].Value);
+
+            Label = instruction.Label;
 
             return instruction;
+        }
+
+        public override bool IsGoToLabels()
+        {
+            return true;
         }
     }
 }

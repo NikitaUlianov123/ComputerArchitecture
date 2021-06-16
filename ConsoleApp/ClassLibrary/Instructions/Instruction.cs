@@ -15,6 +15,7 @@ namespace ClassLibrary.Instructions
         protected string space = @" +";
         protected string comments = @" *(?:\/\/.*)*";
         protected string literalValue = @"(\d*)";
+        protected string label = @"(\w+)";
 
         protected abstract string Pattern { get; }
         protected abstract string OpCodeAsm { get; }
@@ -22,5 +23,10 @@ namespace ClassLibrary.Instructions
 
         public abstract Instruction Parse(string assembly);
         public abstract byte[] Emit();
+
+        public virtual bool IsGoToLabels()
+        {
+            return false;
+        }
     }
 }
