@@ -12,7 +12,7 @@ namespace ClassLibrary.Instructions.Memory
         private ushort val;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}";
 
         protected override string OpCodeAsm
             => "(Set)";
@@ -41,6 +41,10 @@ namespace ClassLibrary.Instructions.Memory
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
             instruction.val = ushort.Parse(match.Groups[3].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            destReg = instruction.destReg;
+            val = instruction.val;
 
             return instruction;
         }

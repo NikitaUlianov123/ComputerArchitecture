@@ -10,7 +10,7 @@ namespace ClassLibrary.Instructions.Flow_Control
         private string originalAssembly;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{comments}$";
+            => $"{start}{OpCodeAsm}";
 
         protected override string OpCodeAsm
             => "(Nop)";
@@ -37,6 +37,8 @@ namespace ClassLibrary.Instructions.Flow_Control
             var instruction = new Nop();
 
             instruction.originalAssembly = match.Groups[0].Value;
+
+            originalAssembly = instruction.originalAssembly;
 
             return instruction;
         }

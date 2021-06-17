@@ -40,6 +40,7 @@ namespace ClassLibrary.Instructions.Flow_Control
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.Label = Convert.ToString(match.Groups[1].Value);
 
+            originalAssembly = instruction.originalAssembly;
             Label = instruction.Label;
 
             return instruction;

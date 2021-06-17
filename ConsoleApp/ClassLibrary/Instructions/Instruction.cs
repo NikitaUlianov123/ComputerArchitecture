@@ -13,8 +13,9 @@ namespace ClassLibrary.Instructions
         protected string end = @"$";
         protected string register = @"R([012]\d|3[01]|\d)";
         protected string space = @" +";
-        protected string comments = @" *(?:\/\/.*)*";
+        protected string comments = @"(?:\/\/)";
         protected string literalValue = @"(\d*)";
+        protected string hexValue = @"([[:xdigit:]]+)";
         protected string label = @"(\w+)";
 
         protected abstract string Pattern { get; }
@@ -25,6 +26,11 @@ namespace ClassLibrary.Instructions
         public abstract byte[] Emit();
 
         public virtual bool IsGoToLabels()
+        {
+            return false;
+        }
+
+        public virtual bool IsBreqLabel()
         {
             return false;
         }

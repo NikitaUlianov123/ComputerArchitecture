@@ -11,7 +11,7 @@ namespace ClassLibrary.Instructions.Flow_Control
         public ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{hexValue}";
 
         protected override string OpCodeAsm
             => "(GoTo)";
@@ -39,6 +39,9 @@ namespace ClassLibrary.Instructions.Flow_Control
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.memAddress = ushort.Parse(match.Groups[2].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            memAddress = instruction.memAddress;
 
             return instruction;
         }

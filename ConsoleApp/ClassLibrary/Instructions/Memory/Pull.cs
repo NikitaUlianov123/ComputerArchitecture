@@ -11,10 +11,10 @@ namespace ClassLibrary.Instructions.Memory
         private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}";
 
         protected override string OpCodeAsm
-            => "(Push)";
+            => "(Pull)";
 
         protected override byte OpCode
             => 0x42;
@@ -39,6 +39,9 @@ namespace ClassLibrary.Instructions.Memory
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            destReg = instruction.destReg;
 
             return instruction;
         }

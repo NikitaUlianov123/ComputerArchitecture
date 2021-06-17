@@ -11,7 +11,7 @@ namespace ClassLibrary.Instructions.Memory
         private byte sourceReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}";
 
         protected override string OpCodeAsm
             => "(Push)";
@@ -39,6 +39,9 @@ namespace ClassLibrary.Instructions.Memory
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.sourceReg = byte.Parse(match.Groups[2].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            sourceReg = instruction.sourceReg;
 
             return instruction;
         }

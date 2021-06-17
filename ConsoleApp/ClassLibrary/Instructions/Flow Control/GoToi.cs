@@ -11,7 +11,7 @@ namespace ClassLibrary.Instructions.Flow_Control
         private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{comments}$";
+            => $@"{start}{OpCodeAsm}{space}{register}"; //{start}{OpCodeAsm}{space}{register}{space}{comments}";
 
         protected override string OpCodeAsm
             => "(Gotoi)";
@@ -39,6 +39,9 @@ namespace ClassLibrary.Instructions.Flow_Control
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            destReg = instruction.destReg;
 
             return instruction;
         }

@@ -16,13 +16,33 @@ namespace ConsoleApp
         {
             string[] assembly = new[]
             {
-                "Label:",
-                "Set R0 42  //comment",
-                "Set R1 50  //comment",
-                "Add R0 R1 R2  //comment",
-                "Yeet:",
-                "Goto Label",
-                "Goto Yeet"
+                "FlowControl:",
+                "BREQ R7 ABCD",
+                "Breq R3 FlowControl",
+                "GoTo f00d",
+                "Gotoi R10",
+                "Goto Logic",
+                "Nop",
+                "Logic:",
+                "And R1 R2 R3",
+                "Eq R3 R4 R5",
+                "Not R5 R6",
+                "Or R10 R11 R12",
+                "SHL R17 R18",
+                "SHR R18 R17",
+                "Xor R19 R20 R21",
+                "Math:",
+                "Add R1 R2 R3",
+                "Sub R1 R2 R3",
+                "Mul R1 R2 R3",
+                "Div R1 R2 R3",
+                "Mod R1 R2 R3",
+                "Memory:",
+                "Set R1 30",
+                "Push R22",
+                "Pull R23",
+                "Store R5 f00d",
+                "Load R25 f00d"
             };
 
             List<Instruction> possibleInstructions
@@ -30,6 +50,7 @@ namespace ConsoleApp
             {
                //Flow Control:
                 new Breq(),
+                new BreqLabel(),
                 new GoTo(),
                 new GoToi(),
                 new GoToLabels(),
@@ -82,6 +103,7 @@ namespace ConsoleApp
             //Second pass:
             foreach (var line in assembly)
             {
+                Console.WriteLine(line);
                 var match = Regex.Match(line, label);
                 if (match.Success) continue;
                 bool valid = false;
@@ -97,6 +119,14 @@ namespace ConsoleApp
 
                         instructions.Add(instruction2);
                     }
+                    else if (possibleInstruction.IsBreqLabel())
+                    {
+                        Breq instruction2 = new Breq();
+                        instruction2.checkReg = ((BreqLabel)possibleInstruction).checkReg;
+                        instruction2.memaddress = ushort.Parse(Labels[((BreqLabel)possibleInstruction).Label].ToString());
+
+                        instructions.Add(instruction2);
+                    }
                     else
                     {
 
@@ -104,7 +134,7 @@ namespace ConsoleApp
                     }
 
 
-                    var bytes = instruction.Emit();
+                    var bytes = instructions[instructions.Count - 1].Emit();
                     machineCode.AddRange(bytes);
 
                     foreach (var @byte in bytes)

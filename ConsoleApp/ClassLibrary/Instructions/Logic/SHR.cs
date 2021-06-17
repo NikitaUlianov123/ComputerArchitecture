@@ -12,7 +12,7 @@ namespace ClassLibrary.Instructions.Logic
         private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{register}{space}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{register}";
 
         protected override string OpCodeAsm
             => "(SHR)";
@@ -41,6 +41,10 @@ namespace ClassLibrary.Instructions.Logic
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.sourceReg = byte.Parse(match.Groups[2].Value);
             instruction.destReg = byte.Parse(match.Groups[3].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            sourceReg = instruction.sourceReg;
+            destReg = instruction.destReg;
 
             return instruction;
         }

@@ -13,7 +13,7 @@ namespace ClassLibrary.Instructions.Math
         private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{register}{space}{register}{space}{comments}$";
+            => $@"{start}{OpCodeAsm}{space}{register}{space}{register}{space}{register}";
 
         protected override string OpCodeAsm
             => "(Add)";
@@ -30,7 +30,6 @@ namespace ClassLibrary.Instructions.Math
                 Reg2,
                 destReg
             };
-
         }
 
         public override Instruction Parse(string asm)
@@ -44,6 +43,11 @@ namespace ClassLibrary.Instructions.Math
             instruction.Reg1 = byte.Parse(match.Groups[2].Value);
             instruction.Reg2 = byte.Parse(match.Groups[3].Value);
             instruction.destReg = byte.Parse(match.Groups[4].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            Reg1 = instruction.Reg1;
+            Reg2 = instruction.Reg2;
+            destReg = instruction.destReg;
 
             return instruction;
         }

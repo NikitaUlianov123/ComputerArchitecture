@@ -8,14 +8,14 @@ namespace ClassLibrary.Instructions.Flow_Control
     public class Breq : Instruction
     {
         private string originalAssembly;
-        private byte checkReg;
-        private ushort memaddress;
+        public byte checkReg;
+        public ushort memaddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $@"{start}{OpCodeAsm}{space}{register}{space}{hexValue}{comments}"; //{start}{OpCodeAsm}{space}{register}{space}{literalValue} //{comments}
 
         protected override string OpCodeAsm
-            => "(Breq)";
+            => "(BREQ)";
 
         protected override byte OpCode
             => 0x35;
@@ -41,6 +41,10 @@ namespace ClassLibrary.Instructions.Flow_Control
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.checkReg = byte.Parse(match.Groups[2].Value);
             instruction.memaddress = ushort.Parse(match.Groups[3].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            checkReg = instruction.checkReg;
+            memaddress = instruction.memaddress;
 
             return instruction;
         }
