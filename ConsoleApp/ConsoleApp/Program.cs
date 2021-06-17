@@ -14,7 +14,8 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            string[] assembly = new[]
+            #region assembler
+            string[] test1 = new string[]
             {
                 "FlowControl:",
                 "BREQ R7 ABCD",
@@ -44,6 +45,21 @@ namespace ConsoleApp
                 "Store R5 f00d",
                 "Load R25 f00d"
             };
+
+            string[] counter = new string[]
+            {
+                "Set R0 0",
+                "Set R1 1",
+                "Set R5 10",
+                "Loop:",
+                "Add R0 R1 R0",
+                "Eq R0 R5 R3",
+                "Breq R3 End",
+                "Goto Loop",
+                "End:"
+            };
+
+            string[] assembly = counter;
 
             List<Instruction> possibleInstructions
            = new List<Instruction>()
@@ -150,6 +166,158 @@ namespace ConsoleApp
                     Console.WriteLine("");
                 }
             }
+
+            #endregion
+
+            byte[] MachineCode = machineCode.ToArray();
+
+            Computer computer = new Computer();
+
+            computer.LoadProgram(MachineCode);
+
+            computer.Run();
+
+            /*
+             BIG NOTE TO SELF:
+
+             ask how to read memory address from string with regex (is gets an empty group)
+             
+             ask how to do NOT
+             
+             */
+
+            #region dissassembler
+            if (MachineCode.Length % 4 != 0) throw new Exception("What the hell did you give me?!?!?!?!?!?!?!");
+
+            List<string> OriginalCode = new List<string>();
+
+            for (int i = 0; i < MachineCode.Length; i += 4)
+            {
+                byte[] line = new byte[]
+                {
+                    MachineCode[i],
+                    MachineCode[i + 1],
+                    MachineCode[i + 2],
+                    MachineCode[i + 3]
+                };
+
+                string lineOutput = "";
+
+                switch (line[0])
+                {
+                    //Math:
+                    case 0x10:
+                        //Add
+                        lineOutput = $"Add R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x11:
+                        //Sub
+                        lineOutput = $"Sub R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x12:
+                        //Mul
+                        lineOutput = $"Mul R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x13:
+                        //Div
+                        lineOutput = $"Div R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x14:
+                        //Mod
+                        lineOutput = $"Mod R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    //Logic:
+                    case 0x20:
+                        //SHL
+                        lineOutput = $"SHL R{line[1]} R{line[2]}";
+                        break;
+
+                    case 0x21:
+                        //SHR
+                        lineOutput = $"SHR R{line[1]} R{line[2]}";
+                        break;
+
+                    case 0x22:
+                        //And
+                        lineOutput = $"And R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x23:
+                        //Or
+                        lineOutput = $"Or R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x24:
+                        //Xor
+                        lineOutput = $"Xor R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    case 0x25:
+                        //Not
+                        lineOutput = $"Not R{line[1]} R{line[2]}";
+                        break;
+
+                    case 0x26:
+                        //Eq
+                        lineOutput = $"Eq R{line[1]} R{line[2]} R{line[3]}";
+                        break;
+
+                    //Flow control:
+                    case 0x30:
+                        //Goto
+                        lineOutput = $"GoTo {line[1]}{line[2]}";
+                        break;
+
+                    case 0x31:
+                        //Gotoi
+                        lineOutput = $"Gotoi R{line[1]}";
+                        break;
+
+                    case 0x35:
+                        //Breq
+                        lineOutput = $"Breq R{line[1]} {line[2]}{line[3]}";
+                        break;
+
+                    case 0x00:
+                        //Nop
+                        lineOutput = "Nop";
+                        break;
+
+                    //Memory:
+                    case 0x40:
+                        //Set
+                        lineOutput = $"Set R{line[1]} {line[2]}{line[3]}";
+                        break;
+
+                    case 0x41:
+                        //Push
+                        lineOutput = $"Push R{line[1]}";
+                        break;
+
+                    case 0x42:
+                        //Pull
+                        lineOutput = $"Pull R{line[1]}";
+                        break;
+
+                    case 0x43:
+                        //Store
+                        lineOutput = $"Store R{line[1]} {line[2]}{line[3]}";
+                        break;
+
+                    case 0x44:
+                        //Load
+                        lineOutput = $"Load R{line[1]} {line[2]}{line[3]}";
+                        break;
+                }
+
+                OriginalCode.Add(lineOutput);
+            }
+            #endregion
         }
     }
 }

@@ -40,7 +40,7 @@ namespace ClassLibrary.Instructions.Memory
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
-            //instruction.memAddress = ushort.Parse(match.Groups[3].Value);
+            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
 
             originalAssembly = instruction.originalAssembly;
             destReg = instruction.destReg;
