@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Memory
+namespace ClassLibrary.Instructions.Mamory
 {
-    public class Store : Instruction
+    class Load : Instruction
     {
         private string originalAssembly;
-        private byte sourceReg;
+        private byte destReg;
         private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{hexValue}";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
 
         protected override string OpCodeAsm
-            => "(Store)";
+            => "(Load)";
 
         protected override byte OpCode
-            => 0x43;
+            => 0x44;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
-                sourceReg,
+                destReg,
                 (byte)(memAddress >> 8),
                 (byte)memAddress
             };
@@ -36,15 +36,11 @@ namespace ClassLibrary.Instructions.Memory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Store();
+            var instruction = new Load();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.sourceReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value, System.Globalization.NumberStyles.HexNumber);
-
-            originalAssembly = instruction.originalAssembly;
-            sourceReg = instruction.sourceReg;
-            memAddress = instruction.memAddress;
+            instruction.destReg = byte.Parse(match.Groups[2].Value);
+            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

@@ -12,7 +12,7 @@ namespace ClassLibrary.Instructions.Memory
         private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{hexValue}";
 
         protected override string OpCodeAsm
             => "(Load)";
@@ -40,7 +40,7 @@ namespace ClassLibrary.Instructions.Memory
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.destReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
+            instruction.memAddress = ushort.Parse(match.Groups[3].Value, System.Globalization.NumberStyles.HexNumber);
 
             originalAssembly = instruction.originalAssembly;
             destReg = instruction.destReg;

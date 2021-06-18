@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Memory
+namespace ClassLibrary.Instructions.Mamory
 {
-    public class Store : Instruction
+    class Store : Instruction
     {
         private string originalAssembly;
         private byte sourceReg;
         private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{hexValue}";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
 
         protected override string OpCodeAsm
             => "(Store)";
@@ -40,11 +40,7 @@ namespace ClassLibrary.Instructions.Memory
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.sourceReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value, System.Globalization.NumberStyles.HexNumber);
-
-            originalAssembly = instruction.originalAssembly;
-            sourceReg = instruction.sourceReg;
-            memAddress = instruction.memAddress;
+            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

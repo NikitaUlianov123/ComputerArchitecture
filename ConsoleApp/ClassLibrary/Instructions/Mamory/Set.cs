@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Flow_Control
+namespace ClassLibrary.Instructions.Mamory
 {
-    public class GoTo : Instruction
+    public class Set : Instruction
     {
         private string originalAssembly;
-        public ushort memAddress;
+        private byte destReg;
+        private ushort val;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{hexValue}";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
 
         protected override string OpCodeAsm
-            => "(GoTo)";
+            => "(Set)";
 
         protected override byte OpCode
-            => 0x30;
+            => 0x40;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
-                (byte)(memAddress >> 8),
-                (byte)memAddress,
-                padding
+                destReg,
+                (byte)(val >> 8),
+                (byte)val
             };
         }
 
@@ -35,13 +36,11 @@ namespace ClassLibrary.Instructions.Flow_Control
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new GoTo();
+            var instruction = new Set();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.memAddress = ushort.Parse(match.Groups[2].Value, System.Globalization.NumberStyles.HexNumber);
-
-            originalAssembly = instruction.originalAssembly;
-            memAddress = instruction.memAddress;
+            instruction.destReg = byte.Parse(match.Groups[2].Value);
+            instruction.val = ushort.Parse(match.Groups[3].Value);
 
             return instruction;
         }

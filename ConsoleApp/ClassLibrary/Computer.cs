@@ -209,7 +209,8 @@ namespace ClassLibrary
         }
         private void Not(byte[] line)
         {
-            throw new NotImplementedException();
+            //~
+            registers[line[2]] = (ushort)(~registers[line[1]]);
         } //How do you not?
         private void Eq(byte[] line)
         {

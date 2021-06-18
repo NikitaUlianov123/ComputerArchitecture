@@ -15,7 +15,7 @@ namespace ClassLibrary.Instructions
         protected string space = @" +";
         protected string comments = @"(?:\/\/)";
         protected string literalValue = @"(\d*)";
-        protected string hexValue = @"([[:xdigit:]]+)";
+        protected string hexValue = @"([a-fA-F0-9]{4})";
         protected string label = @"(\w+)";
 
         protected abstract string Pattern { get; }

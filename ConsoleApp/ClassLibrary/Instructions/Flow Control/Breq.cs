@@ -12,7 +12,7 @@ namespace ClassLibrary.Instructions.Flow_Control
         public ushort memaddress;
 
         protected override string Pattern
-            => $@"{start}{OpCodeAsm}{space}{register}{space}{hexValue}{comments}"; //{start}{OpCodeAsm}{space}{register}{space}{literalValue} //{comments}
+            => $@"{start}{OpCodeAsm}{space}{register}{space}{hexValue}"; //{start}{OpCodeAsm}{space}{register}{space}{literalValue} //{comments}
 
         protected override string OpCodeAsm
             => "(BREQ)";
@@ -40,7 +40,7 @@ namespace ClassLibrary.Instructions.Flow_Control
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.checkReg = byte.Parse(match.Groups[2].Value);
-            instruction.memaddress = ushort.Parse(match.Groups[3].Value);
+            instruction.memaddress = ushort.Parse(match.Groups[3].Value, System.Globalization.NumberStyles.HexNumber);
 
             originalAssembly = instruction.originalAssembly;
             checkReg = instruction.checkReg;

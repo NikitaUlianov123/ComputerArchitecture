@@ -18,7 +18,7 @@ namespace ConsoleApp
             string[] test1 = new string[]
             {
                 "FlowControl:",
-                "BREQ R7 ABCD",
+                "BREQ R7 abcd",
                 "Breq R3 FlowControl",
                 "GoTo f00d",
                 "Gotoi R10",
@@ -59,7 +59,7 @@ namespace ConsoleApp
                 "End:"
             };
 
-            string[] assembly = counter;
+            string[] assembly = test1;
 
             List<Instruction> possibleInstructions
            = new List<Instruction>()
