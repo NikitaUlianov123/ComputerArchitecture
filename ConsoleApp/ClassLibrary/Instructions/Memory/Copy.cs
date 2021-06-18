@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Mamory
+namespace ClassLibrary.Instructions.Memory
 {
-    class Load : Instruction
+    public class Copy : Instruction
     {
         private string originalAssembly;
+        private byte sourceReg;
         private byte destReg;
-        private ushort memAddress;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{register}";
 
         protected override string OpCodeAsm
-            => "(Load)";
+            => "(Copy)";
 
         protected override byte OpCode
-            => 0x44;
+            => 0x45;
 
         public override byte[] Emit()
         {
             return new byte[]
             {
                 OpCode,
+                sourceReg,
                 destReg,
-                (byte)(memAddress >> 8),
-                (byte)memAddress
+                padding
             };
         }
 
@@ -36,11 +36,15 @@ namespace ClassLibrary.Instructions.Mamory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Load();
+            var instruction = new Copy();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.destReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
+            instruction.sourceReg = byte.Parse(match.Groups[2].Value);
+            instruction.destReg = byte.Parse(match.Groups[3].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            sourceReg = instruction.sourceReg;
+            destReg = instruction.destReg;
 
             return instruction;
         }

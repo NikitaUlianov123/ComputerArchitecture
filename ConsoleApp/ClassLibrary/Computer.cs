@@ -158,6 +158,21 @@ namespace ClassLibrary
                         //Load
                         Load(line);
                         break;
+
+                    case 0x45:
+                        //Copy
+                        Copy(line);
+                        break;
+
+                    case 0x46:
+                        //Loadi
+                        Loadi(line);
+                        break;
+
+                    case 0x47:
+                        //Storei
+                        Storei(line);
+                        break;
                 }
 
                 registers[instructionPointer] += 4;
@@ -211,7 +226,7 @@ namespace ClassLibrary
         {
             //~
             registers[line[2]] = (ushort)(~registers[line[1]]);
-        } //How do you not?
+        }
         private void Eq(byte[] line)
         {
             if (registers[line[1]] == registers[line[2]])
@@ -247,7 +262,7 @@ namespace ClassLibrary
         private void Nop(byte[] line)
         {
             
-        } //What do I even do here?
+        }
 
         //Memory functions:
         private void Set(byte[] line)
@@ -285,6 +300,20 @@ namespace ClassLibrary
 
             registers[line[1]] = (ushort)(memory[address] << 8);
             registers[line[1]] += memory[address + 4];
+        }
+        private void Copy(byte[] line)
+        {
+            registers[line[2]] = registers[line[1]];
+        }
+        private void Loadi(byte[] line)
+        {
+            registers[line[2]] = memory[registers[line[1]]];
+            registers[line[2]] |= memory[registers[line[1]] + 4];
+        }
+        private void Storei(byte[] line)
+        {
+            memory[registers[line[2]]] = (byte)(registers[line[1]] >> 8);
+            memory[registers[line[2]] + 4] = (byte)(registers[line[1]]);
         }
     }
 }

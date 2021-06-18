@@ -35,6 +35,9 @@ Commands:
 		Pull  42
 		Store 43
 		Load  44
+		Copy  45
+		Loadi 46
+		Stori 47
 
 
 Intrinsics:   //Flag register and value register

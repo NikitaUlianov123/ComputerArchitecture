@@ -12,7 +12,7 @@ namespace ClassLibrary.Instructions.Memory
         private ushort val;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}";
+            => @"^Set\s([Rr][\d]+)\s((\d)|(?>....))$";
 
         protected override string OpCodeAsm
             => "(Set)";
@@ -31,6 +31,8 @@ namespace ClassLibrary.Instructions.Memory
             };
         }
 
+
+
         public override Instruction Parse(string asm)
         {
             var match = Regex.Match(asm, Pattern);
@@ -39,8 +41,17 @@ namespace ClassLibrary.Instructions.Memory
             var instruction = new Set();
 
             instruction.originalAssembly = match.Groups[0].Value;
-            instruction.destReg = byte.Parse(match.Groups[2].Value);
-            instruction.val = ushort.Parse(match.Groups[3].Value);
+            instruction.destReg = byte.Parse(match.Groups[1].Value.Substring(1));
+
+            if (Regex.Match(match.Groups[2].Value, $"{start}{hexValue}").Success)
+            {
+
+                instruction.val = ushort.Parse(match.Groups[2].Value, System.Globalization.NumberStyles.HexNumber);
+            }
+            else
+            {
+                instruction.val = ushort.Parse(match.Groups[2].Value);
+            }
 
             originalAssembly = instruction.originalAssembly;
             destReg = instruction.destReg;

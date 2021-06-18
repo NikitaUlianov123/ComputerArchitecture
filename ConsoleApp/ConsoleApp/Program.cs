@@ -14,7 +14,24 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            #region assembler
+            string[] code = new string[]
+            {
+                "Set R5 5",
+                "Set R6 6",
+
+                "Store R5 fff8",
+                "Store R6 fffa",
+
+                "Set R7 fff8",
+                "Set R8 fffa",
+
+                "Loadi R7 R3",
+                "Loadi R8 R4",
+
+                "Stori R4 R7",
+                "Stori R3 R8"
+            };
+
             string[] test1 = new string[]
             {
                 "FlowControl:",
@@ -46,21 +63,9 @@ namespace ConsoleApp
                 "Load R25 f00d"
             };
 
-            string[] counter = new string[]
-            {
-                "Set R0 0",
-                "Set R1 1",
-                "Set R5 10",
-                "Loop:",
-                "Add R0 R1 R0",
-                "Eq R0 R5 R3",
-                "Breq R3 End",
-                "Goto Loop",
-                "End:"
-            };
+            string[] assembly = code;
 
-            string[] assembly = test1;
-
+            #region assembler
             List<Instruction> possibleInstructions
            = new List<Instruction>()
             {
@@ -77,6 +82,9 @@ namespace ConsoleApp
                 new Pull(),
                 new Store(),
                 new Load(),
+                new Copy(),
+                new Storei(),
+                new Loadi(),
                //Math:
                 new Add(),
                 new Sub(),
@@ -176,15 +184,6 @@ namespace ConsoleApp
             computer.LoadProgram(MachineCode);
 
             computer.Run();
-
-            /*
-             BIG NOTE TO SELF:
-
-             ask how to read memory address from string with regex (is gets an empty group)
-             
-             ask how to do NOT
-             
-             */
 
             #region dissassembler
             if (MachineCode.Length % 4 != 0) throw new Exception("What the hell did you give me?!?!?!?!?!?!?!");
@@ -312,6 +311,11 @@ namespace ConsoleApp
                     case 0x44:
                         //Load
                         lineOutput = $"Load R{line[1]} {line[2]}{line[3]}";
+                        break;
+
+                    case 0x45:
+                        //Copy
+                        lineOutput = $"Copy R{line[1]} R{line[2]}";
                         break;
                 }
 

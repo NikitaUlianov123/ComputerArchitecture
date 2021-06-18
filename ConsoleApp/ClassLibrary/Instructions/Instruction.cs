@@ -17,6 +17,7 @@ namespace ClassLibrary.Instructions
         protected string literalValue = @"(\d*)";
         protected string hexValue = @"([a-fA-F0-9]{4})";
         protected string label = @"(\w+)";
+        protected string decimalOrHex = @"(\d*)|([a-fA-F0-9]{4})";
 
         protected abstract string Pattern { get; }
         protected abstract string OpCodeAsm { get; }

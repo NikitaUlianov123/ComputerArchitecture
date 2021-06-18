@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ClassLibrary.Instructions.Mamory
+namespace ClassLibrary.Instructions.Memory
 {
-    class Store : Instruction
+    public class Storei : Instruction
     {
         private string originalAssembly;
         private byte sourceReg;
-        private ushort memAddress;
+        private byte destReg;
 
         protected override string Pattern
-            => $"{start}{OpCodeAsm}{space}{register}{space}{literalValue}{comments}$";
+            => $"{start}{OpCodeAsm}{space}{register}{space}{register}";
 
         protected override string OpCodeAsm
-            => "(Store)";
+            => "(Stori)";
 
         protected override byte OpCode
-            => 0x43;
+            => 0x47;
 
         public override byte[] Emit()
         {
@@ -26,8 +26,8 @@ namespace ClassLibrary.Instructions.Mamory
             {
                 OpCode,
                 sourceReg,
-                (byte)(memAddress >> 8),
-                (byte)memAddress
+                destReg,
+                padding
             };
         }
 
@@ -36,11 +36,15 @@ namespace ClassLibrary.Instructions.Mamory
             var match = Regex.Match(asm, Pattern);
             if (!match.Success) return null;
 
-            var instruction = new Store();
+            var instruction = new Storei();
 
             instruction.originalAssembly = match.Groups[0].Value;
             instruction.sourceReg = byte.Parse(match.Groups[2].Value);
-            instruction.memAddress = ushort.Parse(match.Groups[3].Value);
+            instruction.destReg = byte.Parse(match.Groups[3].Value);
+
+            originalAssembly = instruction.originalAssembly;
+            sourceReg = instruction.sourceReg;
+            destReg = instruction.destReg;
 
             return instruction;
         }
