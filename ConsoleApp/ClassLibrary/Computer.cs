@@ -7,10 +7,12 @@ namespace ClassLibrary
     public class Computer
     {
         private ushort[] registers;
-        private byte[] memory;
+        public byte[] memory;
         int stackStart = 31;
         int instructionPointer = 30;
         int stackPointer = 29;
+
+        public Memory<byte> MMIO;
 
         public Computer()
         {
@@ -20,6 +22,8 @@ namespace ClassLibrary
             registers[stackStart] = 0xFF00;
             registers[instructionPointer] = 0x0000;
             registers[stackPointer] = registers[stackStart];
+
+            MMIO = memory.AsMemory<byte>(memory.Length - 1025, 1024);
         }
 
         public void LoadProgram(byte[] program)
