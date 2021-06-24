@@ -16,6 +16,8 @@ namespace Week3
                                                     .Where(x => x.IsSubclassOf(typeof(CP_Info)))
                                                     .Select(x => (CP_Info)Activator.CreateInstance(x)).ToArray();
 
+        public static Stack<uint?> stack = new Stack<uint?>();
+
         static void Main(string[] args)
         {
             #region ClassFileFormat_Parsing
@@ -73,7 +75,7 @@ namespace Week3
             for (int i = 0; i < Fields_Count; i++)
             {
                 Field_Info field = new Field_Info();
-                field.Parse(ref hexdump);
+                field.Parse(ref hexdump, pool);
 
                 fields[i] = field;
             }
@@ -83,7 +85,7 @@ namespace Week3
             for (int i = 0; i < Methods_Count; i++)
             {
                 Method_Info method = new Method_Info();
-                method.Parse(ref hexdump);
+                method.Parse(ref hexdump, pool);
 
                 methods[i] = method;
             }
@@ -92,10 +94,33 @@ namespace Week3
             Attribute_Info[] attributes = new Attribute_Info[Attributes_Count];
             for (int i = 0; i < Attributes_Count; i++)
             {
-                Attribute_Info attribute = new Attribute_Info();
-                attribute.Parse(ref hexdump);
+                var tag = hexdump.Read2();
 
-                attributes[i] = attribute;
+                CP_Utf8 Utf8 = (CP_Utf8)pool.cp_info[tag - 1];
+
+                string utf8 = Utf8.ToString();
+
+                Attribute_Info yeet = null;
+
+                switch (utf8)
+                {
+                    case "Code":
+                        yeet = new Code();
+                        break;
+
+                    case "LineNumberTable":
+                        yeet = new Line_Number_Table();
+                        break;
+
+                    case "SourceFile":
+                        yeet = new Source_File();
+                        break;
+                }
+
+
+                yeet.Parse(ref hexdump, pool);
+
+                attributes[i] = yeet;
             }
             #endregion
 
@@ -126,9 +151,12 @@ namespace Week3
             }
 
             //Finding code:
-            var code = mainMethod.attributes[0].info;
+            var thing = (Code)mainMethod.attributes[0];
+            var code = thing.code;
 
-            
+            //DO NOT TOUCH ANYTHING ABOVE HERE, JUST RUN THE CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            mainMethod.Execute();
         }
     }
 }

@@ -21,5 +21,10 @@ namespace Week3.Cp_Stuff
                 bytes[i] = hexdump.Read1();
             }
         }
+
+        public override string ToString()
+        {
+            return new string(Array.ConvertAll(bytes, new Converter<byte, char>(x => (char)x)));
+        }
     }
 }
