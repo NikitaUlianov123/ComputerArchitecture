@@ -156,7 +156,7 @@ namespace Week3
 
             //DO NOT TOUCH ANYTHING ABOVE HERE, JUST RUN THE CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-            mainMethod.Execute();
+            mainMethod.Execute(pool, methods);
         }
     }
 }

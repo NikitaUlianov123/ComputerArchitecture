@@ -56,11 +56,14 @@ namespace Week3.Method_Stuff
             }
         }
 
-        public void Execute()
+        public uint? Execute(Constant_Pool pool, Method_Info[] methods)
         {
             var codeAttribute = (Code)attributes[0];
             var code = codeAttribute.code;
-            locals = new uint?[codeAttribute.max_locals];
+            if (locals == null)
+            {
+                locals = new uint?[codeAttribute.max_locals];
+            }
             for (int i = 0; i < code.Length; i++)
             {
                 switch (code[i])
@@ -85,6 +88,10 @@ namespace Week3.Method_Stuff
                         locals[3] = Program.stack.Pop();
                         break;
 
+                    case 0x1a: //iload_0
+                        Program.stack.Push(locals[0]);
+                        break;
+
                     case 0x1b: //iload_1
                         Program.stack.Push(locals[1]);
                         break;
@@ -99,11 +106,41 @@ namespace Week3.Method_Stuff
                         Program.stack.Push(one + two);
                         break;
 
+                    case 0xb8: //invokestatic
+                        ushort index = (ushort)((code[i + 1] << 8) + (code[i + 2]));
+                        var yeet = (CP_MethodRef_Info)(pool.cp_info[index - 1]);
+                        var yote = (CP_Name_And_Type)(pool.cp_info[yeet.Name_And_Type_Index - 1]);
+
+                        Method_Info Method = null;
+
+                        for (int j = 0; j < methods.Length; j++)
+                        {
+                            if (methods[j].name_index == yote.Name_Index && methods[j].descriptor_index == yote.Descriptor_Index)
+                            {
+                                Method = methods[j];
+                            }
+                        }
+
+                        var CodeAttribute = (Code)(Method.attributes[0]);
+                        Method.locals = new uint?[CodeAttribute.max_locals];
+                        for (int k = 0; k < Method.locals.Length; k++)
+                        {
+                            Method.locals[k] = Program.stack.Pop();
+                        }
+                        Program.stack.Push(Method.Execute(pool, methods));
+                        break;
+
+                    case 0xac: //return
+                        return Program.stack.Pop();
+                        break;
+
                     case 0xb1: //return
-                        return;
+                        return null;
                         break;
                 }
             }
+
+            return null;
         }
     }
 }
