@@ -137,6 +137,10 @@ namespace Week3.Method_Stuff
                     case 0xb1: //return
                         return null;
                         break;
+
+                    default:
+                        throw new Exception("OOF");
+                        break;
                 }
             }
 
