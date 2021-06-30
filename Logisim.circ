@@ -166,213 +166,504 @@ end TCL_Generic;&#13;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(1170,420)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="64"/>
+    <comp lib="0" loc="(600,370)" name="Clock"/>
+    <comp lib="4" loc="(160,850)" name="ROM">
+      <a name="addrWidth" val="16"/>
+      <a name="appearance" val="classic"/>
+      <a name="contents">addr/data: 16 8
+256*0 f7 a5 59 b0 f3 db be
+32 9f a4 3e 9a b9 e4 55
+22 97 d2 73 ab 6c ee de
+d0 c9 32 d6 38 67 87 f9
+2c 23 7a e8 69 49 2f 2b
+36 14 95 51 b7 75 db 5b
+83 13 22 5a 75 93 73 57
+bf 18 f2 72 44 d 54 4d
+25 21 8d aa 9c 93 ce 52
+9 af ae 38 4a 97 a6 de
+4f 46 c3 f8 ec d2 96 4e
+f1 f1 6e e6 77 bd c9 61
+7c bb 6 a5 b2 19 5f bc
+93 36 17 fb b8 68 ef 66
+6b f8 de 53 7a 71 0 4c
+4e 1a cd 39 3b c0 8e be
+18 b8 d e2 12 23 8c f0
+bd 73 f7 a1 6b 2e 5c 7a
+c1 f2 9a 73 86 b8 58 d9
+be 5c 39 74 f7 5c 4d ec
+e2 df ca 68 24 f9 fb 77
+6e 2d 77 33 ca 32 96 a3
+38 fa 21 61 79 ef 48 7c
+2a 7f d8 9f 13 da ad 72
+c0 fa 64 40 51 e3 55 d9
+8e 2c c0 b9 3e bd 45 69
+b8 d9 99 24 ba 5e 76 be
+79 4b d3 c1 f8 83 55 d9
+9c d0 4 71 0 2a 41 9d
+6 38 f7 3a 2e 16 11 53
+2a 58 2b c6 b1 4e 8b 26
+93 89 52 e3 d 9e ee a8
+5e 29 d2 4 99 14 69 4b
+bd 18 47 be 2 84 a1 e9
+75 3d ff 4c c6 5 2f 3d
+60 ff 7c c ba 72 20 68
+ec cd f6 0 85 ea 73 6d
+9b 96 d7 4e 22 51 9f b4
+81 51 3d c0 62 cd a 8b
+c9 77 7b 45 68 49 93 a0
+30 84 98 6e 2b f5 9 88
+88 7a ce f2 f7 c4 b1 3c
+37 5d c 2a ec ec c4 97
+b5 b7 75 95 7e 6a ee d9
+12 16 df 56 f3 7b d1 27
+6d 8a 55 b1 e8 24 80 8
+7e 28 96 92 cd ac 4 e9
+d 89 93 5 64 1d da 9a
+78 4b f4 bf 46 c6 73 d0
+32 8f 94 94 5e bb b3 a1
+3e 79 1 fe 6b 53 73 a
+b8 b4 fd 9d 83 a9 0 6c
+4c eb 0 b1 8b 1d 99 b
+bd 51 b3 a2 bf d0 f4 8e
+60 1a 76 79 31 2b b9 82
+9e 0 db 64 41 58 6 d7
+75 bf 28 36 2a c7 e9 61
+f8 98 da e4 75 ab e9 58
+cb d2 1d 9 84 7b 7e d8
+a7 34 54 63 9 71 94 62
+dc 8d 97 54 8b e d 5a
+ca 2d 30 61 e8 94 3c 87
+67 69 1d b7 ce 8b 6a 95
+bc 1a 92 a1 40 3d 54 96
+68 1e 74 13 17 39 ab 7d
+1b d6 de 22 7e d3 93 a2
+1c a7 a0 8a 76 a3 24 41
+c4 79 bb 27 50 2 ec fa
+1 3b e6 7c 35 90 6c 52
+d4 5d c 2f a1 b1 96 31
+d3 54 cc 8a e4 a 56 63
+a8 19 f8 fc a0 9 6 17
+8f aa 16 96 4e 5b f7 63
+dc 88 e2 8f b9 74 ef bd
+73 38 ca c1 80 a a6 83
+4e c2 70 29 98 9a 48 75
+fb 35 2c 6a c9 e2 f6 35
+1b 21 88 4b 2c 65 44 ce
+e5 1b c2 34 b3 eb bc 2a
+a0 3d 4d b5 a1 fe 5a 9b
+2c a3 50 0 e 6d f 53
+7a ee 25 6a 64 cc 3f eb
+f c5 db ee e5 f3 42 e0
+86 50 b5 aa 22 7b e6 11
+b bb a9 5f 85 44 eb 43
+e0 b9 e2 f5 c8 f2 86 9d
+db fe 3f f5 7c 6b df 2c
+e6 c4 d1 d 84 5a 93 60
+7f 47 61 90 97 b0 32 8d
+35 49 e7 f3 c1 1d c2 6b
+31 8f 14 51 e2 9b 3a 97
+aa 61 c9 e8 2d e4 8 10
+70 e 9e 9a ab f7 8c ba
+62 66 5c 6d b6 97 9a de
+f8 3e 83 b 7e cb fc a8
+ba f0 c5 43 87 60 ee a8
+c6 d8 89 86 29 62 a0 52
+4e d8 69 6b f a7 b8 7e
+18 d5 b4 2b b9 44 cd e8
+fc 37 ed 25 fa 15 ed b1
+6a 6d 4a 5c 7a 3a 18 dc
+e1 67 36 f4 34 94 c2 d2
+79 1a cf b8 f9 4c 55 df
+5a 0 68 97 ec 4d ad b2
+43 95 8 22 5 c5 9a e1
+4 db ea 10 8e a8 61 63
+4 d7 fb bb a9 2d 3b 14
+bb 11 60 a1 c7 4f d5 34
+39 18 ed e3 32 4d cf e8
+9e fc ae c9 84 2a 3d b8
+9f d2 62 3b 2e 2d 29 f
+8 34 fb 4a f2 62 e bf
+34 be 1f a5 6a 18 5f 7a
+97 92 aa 24 7f 62 fe 5a
+35 d5 2a 41 f2 96 c5 59
+28 30 61 9a d6 d0 1 da
+1d 4f c7 71 13 70 f1 1e
+d7 65 6 2c e5 98 4c d0
+ab a7 7c d5 5c af b8 7a
+3 cc bc 9a da e0 54 d
+dc 94 d 4e 98 9c 2f 5d
+47 3e e9 e7 20 14 ce a3
+eb f 80 fe d4 c0 aa f9
+81 d2 33 52 66 da af e1
+57 53 19 45 5e e3 bf bf
+ce e3 7d 5d 98 1e 2d 5a
+dc d7 5d c4 c3 10 43 5f
+8b 9 ed c9 e3 6 bc de
+78 55 12 5d cf 8f 4a cb
+55 1d e8 97 b3 fe 11 7e
+67 c6 3d 31 90 e9 2a 34
+8 39 13 8 b7 ad 21 8c
+26 63 22 9f 52 e7 78 a
+c2 b5 53 9d db fc 22 97
+73 a4 46 4a a3 92 8 ff
+e1 2a cd 16 4d 15 88 71
+4a 43 6f 13 50 33 f0 3
+ff 72 e6 76 78 60 8 2c
+e8 39 a1 1a 65 53 85 48
+fc a4 43 fc a 87 97 18
+ca bf 22 c0 2f bb 5c 3f
+f4 1b c9 2a f0 73 6a c6
+ae 4d 76 a6 3d 74 49 98
+43 6f 9c c2 58 4b f6 7
+90 9e 62 ae 59 c7 62 45
+88 7a 23 c3 ad 7b f1 ec
+ae a9 ed f9 93 3d fc 77
+9e 54 2 6f 9e aa 4f c6
+84 a7 59 e7 36 9f ab 9e
+a3 56 1d 47 16 c1 45 27
+cf 13 2d 19 cf f7 45 6c
+f3 19 9b b 44 ea 49 de
+8d a4 2d 70 2c 8c df d2
+2d 76 df be 94 8e e fe
+f9 54 5f e 5a e8 ce 0
+2c 87 90 9f b3 55 8b d7
+93 5c 8 54 a6 d4 a6 68
+e a4 91 31 8e 28 f4 fa
+15 35 ab e1 9b 59 3d ba
+30 67 9 33 52 31 be 38
+7e 97 10 98 9 c0 a8 e8
+2f a7 5b a7 6c d9 9e a3
+a 7c 39 9a fb 93 3b 23
+e8 7f 2d ce 89 c8 8a 8a
+37 1d 6d 47 be 99 8c dc
+78 47 65 29 96 e8 b6 80
+c0 f3 31 40 e1 dc 70 c3
+3b 99 26 79 c1 61 97 54
+a5 b6 49 67 2e a5 fb c9
+cf 4c d6 bf 75 9c e2 19
+20 60 bb dc b5 7e 83 21
+11 7b 1a 3c 61 44 8c 1f
+b0 2a cb 0 c1 2e 9d 3a
+1e 7e d7 70 70 3f cb f8
+11 8d fe 75 df bf 1e c5
+53 ef 32 1e d1 b8 13 73
+41 41 1a 1c dd 7a 1a b5
+4c a5 90 45 f0 18 18 a2
+7b 40 23 14 c8 e9 e7 38
+e8 bb 96 27 7a 7 d2 d7
+3e c3 5f c0 ec d3 1a c2
+42 8a 29 45 5b 6f 73 a2
+47 43 52 c1 d7 42 87 2
+b8 a9 6e 60 c2 78 72 d4
+92 79 c2 f6 55 80 44 ea
+e6 f3 c9 79 1b 8c 82 7e
+5c 5d b3 83 74 14 a6 aa
+ab 80 e1 d1 14 53 9a f1
+22 29 6a c6 81 c9 41 b5
+23 a9 9a e9 98 b7 ef be
+a2 56 6e 62 8 a6 eb b9
+aa 8 18 81 d5 e0 f4 b6
+d8 9d 81 38 d7 f5 b9 aa
+de 75 c2 9c 38 38 60 eb
+1 f6 aa 67 fa 40 0 b7
+9c 9 3c 79 6f 68 26 ad
+9b 9b 2d 53 bf 4e 54 51
+1 1d 6a 9a 65 57 7d 8d
+62 5 90 9a b2 2a 8b 2b
+69 4b 72 c0 49 31 da 5c
+54 ed 97 1f a1 1b ba 34
+73 6b ba ec 87 5d f0 2b
+ac 4b 48 2 99 ac 35 9d
+fa 96 e5 5f cb 84 b6 4b
+e9 59 e7 a5 e6 a4 92 d8
+1c 25 d9 9a 4 90 60 4d
+c8 90 fa a8 16 e a6 96
+36 b2 bc 5e 5e a9 63 3
+45 a9 45 ed f5 32 86 c8
+e5 15 f1 ab 46 39 74 7d
+9d 9c ce 94 91 98 86 9e
+5 67 1e c4 69 e9 88 c
+4d a4 d9 fe 37 b 3c 8a
+b5 2 28 28 b4 a1 d5 41
+13 38 eb cd 73 92 7c 3c
+50 7e 34 99 55 8a cf ed
+eb 11 ca e1 12 78 5d a6
+74 b4 a7 19 b7 e 2b 21
+12 2a 7a 5b 22 45 32 f9
+fe bd 26 e7 88 d6 de 2e
+6 ba 41 9d f0 c1 90 a5
+b f3 96 84 b6 ca 1d a6
+83 3b a4 47 9 f7 4e 5c
+f7 ed 1c b3 6c 13 5e 59
+86 66 66 3b 39 2f 7f f
+61 86 1d 74 19 1b 55 57
+4d 34 8f 99 8d f1 79 ee
+24 d7 3e 8 69 8b f7 f3
+54 dd 61 c2 53 8 d0 6b
+5e 37 63 ef 48 4b 79 bd
+58 db 63 58 18 7c 5a 37
+6c 41 b3 eb e5 85 51 87
+57 e7 5a 3b a8 95 2c 42
+eb cd 92 fe ac a1 32 60
+8d fa 4a 8d 11 de 9b be
+b7 f5 a4 67 4a 49 13 9b
+77 4c 78 ae 9f 1f 3b 1b
+ee 11 d0 a8 ac 65 28 c7
+d3 57 6a 3f e0 61 e2 b
+ee ba 39 82 ff 1e e7 b7
+9d d4 e4 22 a1 ed a5 7f
+52 c9 46 f6 b1 df 3 7b
+12 bc ec 77 ee 4b d9 a7
+f7 57 9a 44 6d 4e 73 64
+b0 48 c7 a0 15 46 12 f5
+fc be 1c ef 21 57 6b 3
+32 f0 f8 3d a2 e6 26 1a
+bd 96 ef b6 fb 20 60 2a
+98 6e 46 2f 63 74 29 6
+d6 b8 79 9c 66 15 7 e8
+1c bb b6 98 65 79 72 eb
+25 3e 5f e0 11 dc 55 90
+3d f 8c d8 f4 be 93 3a
+c7 80 87 4 e8 61 80 b2
+b8 e4 4e 90 9d 4c 64 a3
+19 17 14 c9 18 ca fc 1f
+88 f4 c0 a2 2e 6c f9 18
+b7 dc 6c 30 d 83 7e e8
+ec 35 e7 2e b4 a7 a6 ca
+80 e9 34 7a 76 33 fb 5e
+60 e3 9 96 7c c6 0 29
+8f 96 51 28 3f c3 a9 12
+a2 75 aa 7a 11 d2 de e7
+42 7c e8 fa 95 5d fc d6
+ae a6 90 bb 43 14 53 f4
+36 74 5e f3 e6 69 a9 ba
+c1 6d bf 7b 1d 15 b5 82
+48 98 58 52 dd 91 a5 e
+59 3 7d 1b ed 9e 99 2
+95 40 ba 9a 68 bd 25 65
+31 e3 4e 3a 3f b8 d3 24
+79 5 ab 8a b5 17 9f 8f
+49 c4 f8 bb e1 ac 79 da
+92 c0 8f 24 2f 8 c6 9d
+db a0 7f bf df 3 e0 55
+bd 8b b a9 85 38 91 e1
+66 b0 28 a5 87 86 9c 5
+17 be 3 9a a2 90 34 ea
+a6 6c 79 10 66 3e 83 9c
+fd f2 9e b8 b5 3a 25 8b
+99 8e 37 e1 48 74 aa b
+c 1 3f 3 2a 9f 17 d4
+7b f 66 38 3b b1 65 82
+20 3 8d be ae 67 1 16
+c9 28 4b 76 8b be 4b 73
+57 51 6b 68 2e 7b 17 e2
+40 52 6c 3d c6 a5 2f 8e
+e 84 0 c3 d7 5 ce 9
+de 45 8d 6d b8 ad 26 c5
+e2 76 af d1 16 6e db 9c
+df fb b4 28 6f 60 87 49
+b0 3f 1e d1 98 5e 34 ed
+c1 ad 25 ce 38 87 e5 8b
+94 38 32 45 4a bf d 8b
+40 d4 65 0 9f 2b 15 3b
+ed fa 11 ee 5a b9 db 49
+59 28 3a a0 72 96 2e 4a
+56 5f 1e cc 33 b5 53 37
+49 a3 a9 ce bd 4f 83 eb
+ad 7f ff 22 84 5d 6a a6
+8e 7e f6 eb ce 20 aa 8d
+f b3 99 70 38 9a 56 27
+e4 32 a6 99 32 12 77 e1
+d8 94 11 76 7e 94 8b 8b
+49 77 7f b8 b5 6f 0 da
+a7 fc cc 36 c2 b5 be e4
+f9 48 85 6a 64 be 9a a6
+57 3 6f f1 b0 a5 e4 81
+71 dc fe f 8e c9 da b9
+6 2 df 29 37 4e 32 f5
+6e ac 6e 48 bd 9a 94 c2
+11 93 40 9d 83 d8 1e 10
+ee 73 9b f7 c1 78 df b3
+15 8e f9 4e 1 ad 5c e3
+2d 28 89 3c a5 ee d bc
+ef c ae 7f 5f 75 e1 bf
+a8 5 7e 79 b6 c3 b6 50
+bb 66 44 b0 88 1a e2 36
+1d 83 fe 4e 82 1 ad 1d
+d8 36 df a1 aa c4 d4 17
+88 5b ce 9c d6 f2 8 17
+e1 53 e6 55 32 dd 6d 75
+27 85 f4 85 be 1d 1b 6d
+b4 d9 fc b ce d a1 9f
+75 3b b5 69 88 4d 7d 90
+6d 1e 8 46 69 3e a5 28
+32 f6 94 ea c1 89 1 33
+6b bd 2d c5 32 99 ee e0
+58 6f 59 e8 35 1c bc 45
+4a 8d d2 8a 95 86 31 d8
+26 9e 7 84 f1 8d 5 f7
+e6 aa 9a d6 3e ae 64 62
+18 bd e3 20 43 a7 6f bb
+5d 6a 6b 29 1c fb bb d
+eb 45 72 5c b8 71 d0 42
+c 68 6b 46 5b 95 ab ac
+9d ef 7a 1a 1d 36 3c 7d
+90 7c fd 2d 68 e6 e9 4e
+6a b3 0 79 7d 7d 9 9c
+c5 bf c7 1e f0 97 6a 46
+cf cc 48 dd 28 11 cc 11
+ca 8a ae 9b e0 90 64 24
+8a b1 d8 e4 a9 fa 5a 8c
+fa 77 d7 66 66 fa 4b b9
+97 1b 73 71 ce 80 c7 ff
+f3 5e a7 7e ed 3f d4 16
+33 5 21 a5 a3 2e 69 9b
+92 59 c3 25 23 8 f4 8d
+dc a6 25 e0 76 cc d5 d0
+f3 bf 10 dc f6 3d e0 ad
+4e 78 4 c3 d3 62 df 50
+75 2b b3 64 91 7 e 49
+86 34 84 30 88 3b 9d c
+b3 75 11 bd 63 d0 32 71
+c2 d3 a9 47 a2 df 64 34
+8c b6 cf 2a 18 41 41 76
+7e 8d b8 69 6d 16 c9 3a
+1b 48 d1 2a 9c 42 70 e9
+77 dc 38 38 76 eb a0 cf
+be c3 3e 80 1e fd 35 9b
+ab 79 eb 94 8c a6 ff e3
+11 0 7a 2b a da 43 9e
+56 5d d8 9f b9 d0 3b a8
+f3 19 29 6d d 82 91 41
+f5 c0 44 b9 4d 31 e8 8e
+7f 65 32 c7 14 e0 53 17
+46 1c b2 83 d3 d4 dc 47
+13 7f b8 fa 4c 1a ff f0
+45 2a ea df 18 1 2c c4
+4c 3f 22 7 23 9b 48 dd
+2f e3 ef ed 2b 41 2c 35
+7 bf 13 2f 44 c 25 2f
+82 80 6 e 56 5d 72 d
+61 57 72 f2 9d 55 ca 77
+fa 79 b5 e4 29 5e d3 fa
+b6 a0 62 13 5c a0 ac 86
+94 88 c0 50 6f 8c 64 f0
+a5 73 49 91 ec 55 80 6e
+8e a6 2c 71 35 72 79 1d
+9 ea cc ae fc 1e 3c 7f
+64 b 3f aa c9 d8 a8 f5
+0 5c d0 ec 78 e3 13 49
+d3 32 7e 9c b8 c7 c6 27
+e6 64 7b a 8d ce 7c 9f
+d8 d2 ad 27 ce 88 e7 a5
+5a db 30 a a7 48 2b 91
+b1 e5 d1 6c 19 a4 61 a0
+38 d8 95 2c 75 f8 16 71
+db a3 30 cd e5 e4 c9 88
+9c b6 8f f3 e3 ca 70 ce
+11 87 4f ea c0 51 f3 f
+e4 d 43 1f 1e e5 b0 7a
+52 48 f1 a4 76 34 f6 25
+ad b7 16 b0 94 b2 8a 87
+da e0 1e 1d 16 16 25 fc
+d4 cb ac e9 f0 db f3 45
+27 87 18 b5 ea c0 15 5
+75 a4 ec 49 20 48 20 45
+f5 b8 67 e 81 3b 9c f0
+ef db fa 92 52 23 87 58
+41 2a cd 8 a8 d0 cf af
+dd 47 3b c5 f1 d5 db 8f
+48 d7 51 c4 6c 8 3 73
+1d 3 53 23 ac 6 13 3b
+88 f8 38 a4 19 ac cd ac
+cc 67 29 2d 6e 9f 63 ee
+be 5 6 48 3c c5 1 c
+47 c e1 a4 66 ca 41 77
+e5 b9 80 92 a3 9c b4 84
+2a cc df 88 0 f0 60 e9
+3c b ac a2 5b bb 3d 44
+54 be ca 1c e9 b9 b7 94
+3f 34 ce d9 b0 e9 2f be
+e0 3d 85 df e e 7a 9
+ac af 6c d9 30 30 60 a2
+2c e2 36 94 9c 19 1e 19
+7e 33 4a 82 a8 d9 e5 e2
+d5 84 43 3a 0 43 59 d6
+f5 ba 6e f6 24 6d 12 af
+b7 3e 4f 13 e7 34 1e 8f
+8b 7d 1c 94 f1 b6 7d 7a
+f1 68 40 a0 3e d5 a4 d7
+ff f5 da 0 9e bb fb f3
+de 9c 3b a2 33 51 5f 7e
+4d da 6c 18 f5 c6 a0 b
+1d b1 a6 1a 31 e 4 94
+b3 26 d7 ff 6 60 c2 f5
+89 c2 24 48 e7 b7 88 6c
+ac 12 61 16 1c 53 f6 20
+3f 28 9b af 40 35 21 97
+f7 17 8f fd c4 a6 11 3d
+9e 7a 30 e 6b b0 43 e4
+91 ee 24 95 cc a3 27 3f
+42 93 48 68 d4 92 a3 65
+b6 8f 28 0 41 d4 8e 54
+7 8b 88 fc 27 83 36 6c
+e3 34 de 9e 6f 0 db f0
+b bb d4 4c 53 6d 31 89
+d5 56 cb 10 e4 31 e2 c2
+ab bc 53 19 84 78 a 8d
+8a ad b4 38 6c b1 b9 bc
+84 68 69 64 27 e 75 89
+3e 33 a0 36 15 7 b5 e
+73 d7 bb 6e e9 d7 67 ce
+6f 21 d1 6c 2c fd 6a 2b
+94 63 2d b7 b8 bd 15 ed
+d8 f0 ce 7a 3d 9d af c1
+45 a3 e6 2 bf e8 f4 b7
+78 59 5c 41 16 2e 96 c4
+23 72 4a 4e 6c c2 ba 3e
+8c 54 7f e3 c3 3b 77 63
+b e8 fd de 6d f3 5b d2
+90 1b 7c c0 92 8b e5 f
+1a 5f e6 31 ad 65 c 4
+41 27 d9 7a f 29 b6 7b
+ad 6e 28 9 5b 41 42 a5
+9c 31 5a f1 8 5c ff 96
+60 f0 29 67 e3 ee b2 c6
+df 31 5 46 8a af 14 91
+12 fd 8f 8c f1 18 52 b8
+86 61 1e db e1 e9 8b de
+de ef 3d f9 74 a6 56 c
+4e 3a 2b 50 9b 15 39 2e
+22 5d 59 6e 98 c1 33 94
+35 75 f0 86 84 7a 33 72
+7a 22 49 ee ca d3 9e 60
+77 b 72 9f aa a3 cd da
+c5 57 b0 b8 b7 85 8c c1
+91 34 f7 fb 59 57 9d d8
+1e 53 74 4f 4c bf 33 48
+41 6a 4 3c 1f a1 77 1c
+e4 b1 ba 72 b7 aa 7 c6
+83 66 5d 42 c9 c9 72 98
+b2 49 e7 23 63 b0 bd 4c
+94 20 7 2f 63 57 e1 7d
+65 34 a0 a3 fe 7a 4a 2b
+f2 d2 48 63 3b 16 59 3b
+1c cc ca 73 76 f0 e4 f5
+59 f5 a4 7f de e b1 84
+33 a9 8a 54 f6 3b fe 7a
+c7
+</a>
     </comp>
-    <comp lib="0" loc="(130,830)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
+    <comp lib="4" loc="(950,850)" name="RAM">
+      <a name="addrWidth" val="16"/>
+      <a name="appearance" val="classic"/>
     </comp>
-    <comp lib="0" loc="(140,660)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(140,990)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(150,310)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(150,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(250,810)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(260,650)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(260,970)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(270,300)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(270,480)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(370,770)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(380,600)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(380,930)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(400,430)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(490,780)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(500,610)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(510,940)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(530,440)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(540,270)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(610,770)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(620,610)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(640,930)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(660,280)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(660,440)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(730,770)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(740,610)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(790,290)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(790,450)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(850,780)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(860,620)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(910,460)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(940,260)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(960,660)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="2" loc="(980,420)" name="Multiplexer">
-      <a name="enable" val="false"/>
-      <a name="select" val="5"/>
-      <a name="width" val="64"/>
-    </comp>
-    <wire from="(130,460)" to="(130,830)"/>
-    <wire from="(130,460)" to="(910,460)"/>
-    <wire from="(140,390)" to="(140,530)"/>
-    <wire from="(140,390)" to="(940,390)"/>
-    <wire from="(140,530)" to="(140,660)"/>
-    <wire from="(140,530)" to="(940,530)"/>
-    <wire from="(140,660)" to="(140,990)"/>
-    <wire from="(150,310)" to="(940,310)"/>
-    <wire from="(150,320)" to="(150,480)"/>
-    <wire from="(150,320)" to="(940,320)"/>
-    <wire from="(250,470)" to="(250,810)"/>
-    <wire from="(250,470)" to="(940,470)"/>
-    <wire from="(260,400)" to="(260,540)"/>
-    <wire from="(260,400)" to="(940,400)"/>
-    <wire from="(260,540)" to="(260,650)"/>
-    <wire from="(260,540)" to="(940,540)"/>
-    <wire from="(260,650)" to="(260,970)"/>
-    <wire from="(270,300)" to="(940,300)"/>
-    <wire from="(270,330)" to="(270,480)"/>
-    <wire from="(270,330)" to="(940,330)"/>
-    <wire from="(370,480)" to="(370,770)"/>
-    <wire from="(370,480)" to="(940,480)"/>
-    <wire from="(380,410)" to="(380,550)"/>
-    <wire from="(380,410)" to="(940,410)"/>
-    <wire from="(380,550)" to="(380,600)"/>
-    <wire from="(380,550)" to="(940,550)"/>
-    <wire from="(380,600)" to="(380,930)"/>
-    <wire from="(400,340)" to="(400,430)"/>
-    <wire from="(400,340)" to="(940,340)"/>
-    <wire from="(490,490)" to="(490,780)"/>
-    <wire from="(490,490)" to="(940,490)"/>
-    <wire from="(500,420)" to="(500,610)"/>
-    <wire from="(500,420)" to="(940,420)"/>
-    <wire from="(510,560)" to="(510,940)"/>
-    <wire from="(510,560)" to="(940,560)"/>
-    <wire from="(530,350)" to="(530,440)"/>
-    <wire from="(530,350)" to="(940,350)"/>
-    <wire from="(540,270)" to="(940,270)"/>
-    <wire from="(610,500)" to="(610,770)"/>
-    <wire from="(610,500)" to="(940,500)"/>
-    <wire from="(620,430)" to="(620,610)"/>
-    <wire from="(620,430)" to="(940,430)"/>
-    <wire from="(640,570)" to="(640,930)"/>
-    <wire from="(640,570)" to="(940,570)"/>
-    <wire from="(660,280)" to="(940,280)"/>
-    <wire from="(660,360)" to="(660,440)"/>
-    <wire from="(660,360)" to="(940,360)"/>
-    <wire from="(730,510)" to="(730,770)"/>
-    <wire from="(730,510)" to="(940,510)"/>
-    <wire from="(740,440)" to="(740,610)"/>
-    <wire from="(740,440)" to="(940,440)"/>
-    <wire from="(790,290)" to="(940,290)"/>
-    <wire from="(790,370)" to="(790,450)"/>
-    <wire from="(790,370)" to="(940,370)"/>
-    <wire from="(850,520)" to="(850,780)"/>
-    <wire from="(850,520)" to="(940,520)"/>
-    <wire from="(860,450)" to="(860,620)"/>
-    <wire from="(860,450)" to="(940,450)"/>
-    <wire from="(910,380)" to="(910,460)"/>
-    <wire from="(910,380)" to="(940,380)"/>
-    <wire from="(910,460)" to="(940,460)"/>
-    <wire from="(960,580)" to="(960,660)"/>
-    <wire from="(980,420)" to="(1170,420)"/>
+    <wire from="(570,350)" to="(570,390)"/>
+    <wire from="(570,350)" to="(610,350)"/>
+    <wire from="(570,390)" to="(610,390)"/>
+    <wire from="(600,370)" to="(610,370)"/>
+    <wire from="(610,350)" to="(610,370)"/>
+    <wire from="(610,370)" to="(610,390)"/>
   </circuit>
   <circuit name="HalfAdder">
     <a name="appearance" val="custom"/>
@@ -778,5 +1069,251 @@ end TCL_Generic;&#13;
     <wire from="(80,930)" to="(130,930)"/>
     <wire from="(80,970)" to="(130,970)"/>
     <wire from="(890,360)" to="(1050,360)"/>
+  </circuit>
+  <circuit name="MyMultiplexer">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="MyMultiplexer"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="327" y="207"/>
+      <circ-port height="10" pin="670,300" width="10" x="325" y="205"/>
+      <circ-port height="8" pin="140,250" width="8" x="106" y="206"/>
+      <circ-port height="8" pin="140,350" width="8" x="106" y="226"/>
+      <circ-port height="8" pin="290,550" width="8" x="106" y="246"/>
+      <polyline fill="none" points="172,210 186,223 187,247 187,223 196,210" stroke="#000000"/>
+      <polyline fill="none" points="207,213 207,248" stroke="#000000"/>
+      <polyline fill="none" points="208,212 220,212" stroke="#000000"/>
+      <polyline fill="none" points="208,231 220,231" stroke="#000000"/>
+      <polyline fill="none" points="209,248 220,249" stroke="#000000"/>
+      <polyline fill="none" points="230,212 230,249" stroke="#000000"/>
+      <polyline fill="none" points="230,213 243,213" stroke="#000000"/>
+      <polyline fill="none" points="232,230 244,230" stroke="#000000"/>
+      <polyline fill="none" points="232,249 243,249" stroke="#000000"/>
+      <polyline fill="none" points="255,214 278,215" stroke="#000000"/>
+      <polyline fill="none" points="265,212 265,245" stroke="#000000"/>
+      <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="200" x="120" y="200"/>
+      <rect height="20" stroke="none" width="200" x="120" y="260"/>
+      <rect height="3" stroke="none" width="10" x="110" y="209"/>
+      <rect height="3" stroke="none" width="10" x="110" y="229"/>
+      <rect height="3" stroke="none" width="10" x="110" y="249"/>
+      <rect height="3" stroke="none" width="10" x="320" y="209"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="315" y="214">Output1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="125" y="214">Input1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="125" y="234">Input2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="125" y="254">Selecter</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="220" y="274">MyMultiplexer</text>
+    </appear>
+    <comp lib="0" loc="(140,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input1"/>
+    </comp>
+    <comp lib="0" loc="(140,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input2"/>
+    </comp>
+    <comp lib="0" loc="(290,550)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Selecter"/>
+    </comp>
+    <comp lib="0" loc="(670,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Output1"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(350,230)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(350,370)" name="AND Gate"/>
+    <comp lib="1" loc="(500,300)" name="XOR Gate"/>
+    <wire from="(140,250)" to="(300,250)"/>
+    <wire from="(140,350)" to="(300,350)"/>
+    <wire from="(290,390)" to="(290,470)"/>
+    <wire from="(290,390)" to="(300,390)"/>
+    <wire from="(290,470)" to="(290,550)"/>
+    <wire from="(30,210)" to="(290,210)"/>
+    <wire from="(30,210)" to="(30,470)"/>
+    <wire from="(30,470)" to="(290,470)"/>
+    <wire from="(350,230)" to="(440,230)"/>
+    <wire from="(350,370)" to="(440,370)"/>
+    <wire from="(440,230)" to="(440,280)"/>
+    <wire from="(440,320)" to="(440,370)"/>
+    <wire from="(500,300)" to="(670,300)"/>
+  </circuit>
+  <circuit name="FourBitMultiplexer">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="FourBitMultiplexer"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="north"/>
+    <comp lib="0" loc="(120,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input0"/>
+    </comp>
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input1"/>
+    </comp>
+    <comp lib="0" loc="(120,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input2"/>
+    </comp>
+    <comp lib="0" loc="(120,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input3"/>
+    </comp>
+    <comp lib="0" loc="(390,500)" name="Splitter">
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
+      <a name="facing" val="north"/>
+      <a name="spacing" val="9"/>
+    </comp>
+    <comp lib="0" loc="(390,580)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Selecter"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(970,260)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Output1"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="4" loc="(290,750)" name="J-K Flip-Flop">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp loc="(450,180)" name="MyMultiplexer"/>
+    <comp loc="(450,270)" name="MyMultiplexer"/>
+    <comp loc="(800,230)" name="MyMultiplexer"/>
+    <wire from="(1000,800)" to="(1000,820)"/>
+    <wire from="(1000,800)" to="(1010,800)"/>
+    <wire from="(1010,650)" to="(1010,670)"/>
+    <wire from="(1010,790)" to="(1010,800)"/>
+    <wire from="(1050,600)" to="(1050,920)"/>
+    <wire from="(120,180)" to="(120,190)"/>
+    <wire from="(120,180)" to="(230,180)"/>
+    <wire from="(120,220)" to="(130,220)"/>
+    <wire from="(120,270)" to="(230,270)"/>
+    <wire from="(120,290)" to="(230,290)"/>
+    <wire from="(130,200)" to="(130,220)"/>
+    <wire from="(130,200)" to="(230,200)"/>
+    <wire from="(170,220)" to="(170,310)"/>
+    <wire from="(170,220)" to="(230,220)"/>
+    <wire from="(170,310)" to="(170,480)"/>
+    <wire from="(170,310)" to="(230,310)"/>
+    <wire from="(170,480)" to="(290,480)"/>
+    <wire from="(380,480)" to="(580,480)"/>
+    <wire from="(390,500)" to="(390,580)"/>
+    <wire from="(450,180)" to="(450,230)"/>
+    <wire from="(450,230)" to="(580,230)"/>
+    <wire from="(450,250)" to="(450,270)"/>
+    <wire from="(450,250)" to="(580,250)"/>
+    <wire from="(580,270)" to="(580,480)"/>
+    <wire from="(690,600)" to="(1050,600)"/>
+    <wire from="(690,600)" to="(690,920)"/>
+    <wire from="(690,920)" to="(1050,920)"/>
+    <wire from="(740,650)" to="(740,670)"/>
+    <wire from="(740,650)" to="(780,650)"/>
+    <wire from="(740,670)" to="(780,670)"/>
+    <wire from="(740,790)" to="(740,800)"/>
+    <wire from="(740,790)" to="(800,790)"/>
+    <wire from="(740,800)" to="(750,800)"/>
+    <wire from="(750,800)" to="(750,820)"/>
+    <wire from="(750,820)" to="(760,820)"/>
+    <wire from="(760,820)" to="(760,840)"/>
+    <wire from="(760,840)" to="(770,840)"/>
+    <wire from="(770,840)" to="(770,860)"/>
+    <wire from="(770,860)" to="(790,860)"/>
+    <wire from="(780,650)" to="(780,670)"/>
+    <wire from="(790,860)" to="(790,880)"/>
+    <wire from="(790,880)" to="(960,880)"/>
+    <wire from="(800,230)" to="(800,260)"/>
+    <wire from="(800,260)" to="(970,260)"/>
+    <wire from="(800,790)" to="(800,810)"/>
+    <wire from="(800,810)" to="(810,810)"/>
+    <wire from="(810,810)" to="(810,820)"/>
+    <wire from="(810,820)" to="(830,820)"/>
+    <wire from="(830,820)" to="(830,830)"/>
+    <wire from="(830,830)" to="(920,830)"/>
+    <wire from="(850,730)" to="(850,740)"/>
+    <wire from="(850,730)" to="(860,730)"/>
+    <wire from="(850,740)" to="(900,740)"/>
+    <wire from="(860,720)" to="(860,730)"/>
+    <wire from="(860,720)" to="(870,720)"/>
+    <wire from="(870,710)" to="(870,720)"/>
+    <wire from="(870,710)" to="(880,710)"/>
+    <wire from="(880,700)" to="(880,710)"/>
+    <wire from="(880,700)" to="(890,700)"/>
+    <wire from="(890,690)" to="(890,700)"/>
+    <wire from="(890,690)" to="(900,690)"/>
+    <wire from="(900,690)" to="(900,740)"/>
+    <wire from="(920,820)" to="(920,830)"/>
+    <wire from="(920,820)" to="(940,820)"/>
+    <wire from="(940,810)" to="(940,820)"/>
+    <wire from="(940,810)" to="(950,810)"/>
+    <wire from="(950,790)" to="(1010,790)"/>
+    <wire from="(950,790)" to="(950,810)"/>
+    <wire from="(960,860)" to="(960,880)"/>
+    <wire from="(960,860)" to="(980,860)"/>
+    <wire from="(970,650)" to="(1010,650)"/>
+    <wire from="(970,650)" to="(970,670)"/>
+    <wire from="(970,670)" to="(1010,670)"/>
+    <wire from="(980,840)" to="(980,860)"/>
+    <wire from="(980,840)" to="(990,840)"/>
+    <wire from="(990,820)" to="(1000,820)"/>
+    <wire from="(990,820)" to="(990,840)"/>
+  </circuit>
+  <circuit name="MyDemultiplexer">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="MyDemultiplexer"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(190,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Input1"/>
+    </comp>
+    <comp lib="0" loc="(550,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Output0"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(550,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Output1"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,530)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Selecter"/>
+    </comp>
+    <comp lib="1" loc="(350,270)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(350,410)" name="AND Gate"/>
+    <wire from="(190,340)" to="(290,340)"/>
+    <wire from="(290,290)" to="(290,340)"/>
+    <wire from="(290,290)" to="(300,290)"/>
+    <wire from="(290,340)" to="(290,390)"/>
+    <wire from="(290,390)" to="(300,390)"/>
+    <wire from="(350,270)" to="(550,270)"/>
+    <wire from="(350,410)" to="(550,410)"/>
+    <wire from="(80,250)" to="(290,250)"/>
+    <wire from="(80,250)" to="(80,430)"/>
+    <wire from="(80,430)" to="(300,430)"/>
+    <wire from="(80,430)" to="(80,530)"/>
   </circuit>
 </project>
