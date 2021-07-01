@@ -55,7 +55,38 @@
     <tool name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
-0
+0 74 26 e3 c f5 87 1a
+f9 f9 cb cc d6 7 f3 5d
+3 63 e5 3d bf da 79 6a
+71 31 e8 c0 d 7b 60 34
+41 a8 7f 12 da 72 26 ca
+a c9 a5 ad d9 a9 c7 d2
+db d0 25 ee 40 6b 70 cc
+26 56 c0 cb 74 4c 9f 5d
+12 8 f6 17 8e 23 d5 7e
+ee fb 8 c3 58 4a 80 df
+a6 e2 9c 51 48 fe f5 1e
+f7 ca 16 cf 24 20 d9 f2
+e0 9d 97 7f 8c 8b b7 45
+30 3b 62 17 2f dd 2 af
+70 ff 35 29 b6 e0 27 79
+42 6d b f6 78 ba 5 64
+5e f3 bb 37 d6 ae 82 37
+ac d b7 12 de 6a a4 c6
+85 7f 40 71 f2 f3 2f d4
+47 d 68 76 c2 ac 72 ab
+47 d8 30 92 61 57 85 d2
+f6 8a 38 1b 7f c6 19 75
+87 86 90 ea ce 81 93 8a
+ac 91 3d 85 67 e4 6 bb
+11 f9 68 fe a3 10 65 42
+17 97 1c 75 1e 95 29 e7
+ed fd ef 8c e8 f2 6b f
+8e de 7 c3 94 c9 85 c5
+5e dc 58 dc e6 42 f9 22
+17 18 2a e1 ec 1f a9 42
+78 32 70 60 a f8 c 57
+a6 fa c6 b1 14 60 65 d8
 </a>
     </tool>
   </lib>
@@ -166,504 +197,563 @@ end TCL_Generic;&#13;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(600,370)" name="Clock"/>
-    <comp lib="4" loc="(160,850)" name="ROM">
+    <comp lib="0" loc="(290,450)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit16" val="2"/>
+      <a name="bit17" val="2"/>
+      <a name="bit18" val="2"/>
+      <a name="bit19" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="bit20" val="2"/>
+      <a name="bit21" val="2"/>
+      <a name="bit22" val="2"/>
+      <a name="bit23" val="2"/>
+      <a name="bit24" val="3"/>
+      <a name="bit25" val="3"/>
+      <a name="bit26" val="3"/>
+      <a name="bit27" val="3"/>
+      <a name="bit28" val="3"/>
+      <a name="bit29" val="3"/>
+      <a name="bit3" val="0"/>
+      <a name="bit30" val="3"/>
+      <a name="bit31" val="3"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="32"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(360,580)" name="Constant"/>
+    <comp lib="0" loc="(580,730)" name="Clock"/>
+    <comp lib="4" loc="(40,390)" name="ROM">
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="classic"/>
-      <a name="contents">addr/data: 16 8
-256*0 f7 a5 59 b0 f3 db be
-32 9f a4 3e 9a b9 e4 55
-22 97 d2 73 ab 6c ee de
-d0 c9 32 d6 38 67 87 f9
-2c 23 7a e8 69 49 2f 2b
-36 14 95 51 b7 75 db 5b
-83 13 22 5a 75 93 73 57
-bf 18 f2 72 44 d 54 4d
-25 21 8d aa 9c 93 ce 52
-9 af ae 38 4a 97 a6 de
-4f 46 c3 f8 ec d2 96 4e
-f1 f1 6e e6 77 bd c9 61
-7c bb 6 a5 b2 19 5f bc
-93 36 17 fb b8 68 ef 66
-6b f8 de 53 7a 71 0 4c
-4e 1a cd 39 3b c0 8e be
-18 b8 d e2 12 23 8c f0
-bd 73 f7 a1 6b 2e 5c 7a
-c1 f2 9a 73 86 b8 58 d9
-be 5c 39 74 f7 5c 4d ec
-e2 df ca 68 24 f9 fb 77
-6e 2d 77 33 ca 32 96 a3
-38 fa 21 61 79 ef 48 7c
-2a 7f d8 9f 13 da ad 72
-c0 fa 64 40 51 e3 55 d9
-8e 2c c0 b9 3e bd 45 69
-b8 d9 99 24 ba 5e 76 be
-79 4b d3 c1 f8 83 55 d9
-9c d0 4 71 0 2a 41 9d
-6 38 f7 3a 2e 16 11 53
-2a 58 2b c6 b1 4e 8b 26
-93 89 52 e3 d 9e ee a8
-5e 29 d2 4 99 14 69 4b
-bd 18 47 be 2 84 a1 e9
-75 3d ff 4c c6 5 2f 3d
-60 ff 7c c ba 72 20 68
-ec cd f6 0 85 ea 73 6d
-9b 96 d7 4e 22 51 9f b4
-81 51 3d c0 62 cd a 8b
-c9 77 7b 45 68 49 93 a0
-30 84 98 6e 2b f5 9 88
-88 7a ce f2 f7 c4 b1 3c
-37 5d c 2a ec ec c4 97
-b5 b7 75 95 7e 6a ee d9
-12 16 df 56 f3 7b d1 27
-6d 8a 55 b1 e8 24 80 8
-7e 28 96 92 cd ac 4 e9
-d 89 93 5 64 1d da 9a
-78 4b f4 bf 46 c6 73 d0
-32 8f 94 94 5e bb b3 a1
-3e 79 1 fe 6b 53 73 a
-b8 b4 fd 9d 83 a9 0 6c
-4c eb 0 b1 8b 1d 99 b
-bd 51 b3 a2 bf d0 f4 8e
-60 1a 76 79 31 2b b9 82
-9e 0 db 64 41 58 6 d7
-75 bf 28 36 2a c7 e9 61
-f8 98 da e4 75 ab e9 58
-cb d2 1d 9 84 7b 7e d8
-a7 34 54 63 9 71 94 62
-dc 8d 97 54 8b e d 5a
-ca 2d 30 61 e8 94 3c 87
-67 69 1d b7 ce 8b 6a 95
-bc 1a 92 a1 40 3d 54 96
-68 1e 74 13 17 39 ab 7d
-1b d6 de 22 7e d3 93 a2
-1c a7 a0 8a 76 a3 24 41
-c4 79 bb 27 50 2 ec fa
-1 3b e6 7c 35 90 6c 52
-d4 5d c 2f a1 b1 96 31
-d3 54 cc 8a e4 a 56 63
-a8 19 f8 fc a0 9 6 17
-8f aa 16 96 4e 5b f7 63
-dc 88 e2 8f b9 74 ef bd
-73 38 ca c1 80 a a6 83
-4e c2 70 29 98 9a 48 75
-fb 35 2c 6a c9 e2 f6 35
-1b 21 88 4b 2c 65 44 ce
-e5 1b c2 34 b3 eb bc 2a
-a0 3d 4d b5 a1 fe 5a 9b
-2c a3 50 0 e 6d f 53
-7a ee 25 6a 64 cc 3f eb
-f c5 db ee e5 f3 42 e0
-86 50 b5 aa 22 7b e6 11
-b bb a9 5f 85 44 eb 43
-e0 b9 e2 f5 c8 f2 86 9d
-db fe 3f f5 7c 6b df 2c
-e6 c4 d1 d 84 5a 93 60
-7f 47 61 90 97 b0 32 8d
-35 49 e7 f3 c1 1d c2 6b
-31 8f 14 51 e2 9b 3a 97
-aa 61 c9 e8 2d e4 8 10
-70 e 9e 9a ab f7 8c ba
-62 66 5c 6d b6 97 9a de
-f8 3e 83 b 7e cb fc a8
-ba f0 c5 43 87 60 ee a8
-c6 d8 89 86 29 62 a0 52
-4e d8 69 6b f a7 b8 7e
-18 d5 b4 2b b9 44 cd e8
-fc 37 ed 25 fa 15 ed b1
-6a 6d 4a 5c 7a 3a 18 dc
-e1 67 36 f4 34 94 c2 d2
-79 1a cf b8 f9 4c 55 df
-5a 0 68 97 ec 4d ad b2
-43 95 8 22 5 c5 9a e1
-4 db ea 10 8e a8 61 63
-4 d7 fb bb a9 2d 3b 14
-bb 11 60 a1 c7 4f d5 34
-39 18 ed e3 32 4d cf e8
-9e fc ae c9 84 2a 3d b8
-9f d2 62 3b 2e 2d 29 f
-8 34 fb 4a f2 62 e bf
-34 be 1f a5 6a 18 5f 7a
-97 92 aa 24 7f 62 fe 5a
-35 d5 2a 41 f2 96 c5 59
-28 30 61 9a d6 d0 1 da
-1d 4f c7 71 13 70 f1 1e
-d7 65 6 2c e5 98 4c d0
-ab a7 7c d5 5c af b8 7a
-3 cc bc 9a da e0 54 d
-dc 94 d 4e 98 9c 2f 5d
-47 3e e9 e7 20 14 ce a3
-eb f 80 fe d4 c0 aa f9
-81 d2 33 52 66 da af e1
-57 53 19 45 5e e3 bf bf
-ce e3 7d 5d 98 1e 2d 5a
-dc d7 5d c4 c3 10 43 5f
-8b 9 ed c9 e3 6 bc de
-78 55 12 5d cf 8f 4a cb
-55 1d e8 97 b3 fe 11 7e
-67 c6 3d 31 90 e9 2a 34
-8 39 13 8 b7 ad 21 8c
-26 63 22 9f 52 e7 78 a
-c2 b5 53 9d db fc 22 97
-73 a4 46 4a a3 92 8 ff
-e1 2a cd 16 4d 15 88 71
-4a 43 6f 13 50 33 f0 3
-ff 72 e6 76 78 60 8 2c
-e8 39 a1 1a 65 53 85 48
-fc a4 43 fc a 87 97 18
-ca bf 22 c0 2f bb 5c 3f
-f4 1b c9 2a f0 73 6a c6
-ae 4d 76 a6 3d 74 49 98
-43 6f 9c c2 58 4b f6 7
-90 9e 62 ae 59 c7 62 45
-88 7a 23 c3 ad 7b f1 ec
-ae a9 ed f9 93 3d fc 77
-9e 54 2 6f 9e aa 4f c6
-84 a7 59 e7 36 9f ab 9e
-a3 56 1d 47 16 c1 45 27
-cf 13 2d 19 cf f7 45 6c
-f3 19 9b b 44 ea 49 de
-8d a4 2d 70 2c 8c df d2
-2d 76 df be 94 8e e fe
-f9 54 5f e 5a e8 ce 0
-2c 87 90 9f b3 55 8b d7
-93 5c 8 54 a6 d4 a6 68
-e a4 91 31 8e 28 f4 fa
-15 35 ab e1 9b 59 3d ba
-30 67 9 33 52 31 be 38
-7e 97 10 98 9 c0 a8 e8
-2f a7 5b a7 6c d9 9e a3
-a 7c 39 9a fb 93 3b 23
-e8 7f 2d ce 89 c8 8a 8a
-37 1d 6d 47 be 99 8c dc
-78 47 65 29 96 e8 b6 80
-c0 f3 31 40 e1 dc 70 c3
-3b 99 26 79 c1 61 97 54
-a5 b6 49 67 2e a5 fb c9
-cf 4c d6 bf 75 9c e2 19
-20 60 bb dc b5 7e 83 21
-11 7b 1a 3c 61 44 8c 1f
-b0 2a cb 0 c1 2e 9d 3a
-1e 7e d7 70 70 3f cb f8
-11 8d fe 75 df bf 1e c5
-53 ef 32 1e d1 b8 13 73
-41 41 1a 1c dd 7a 1a b5
-4c a5 90 45 f0 18 18 a2
-7b 40 23 14 c8 e9 e7 38
-e8 bb 96 27 7a 7 d2 d7
-3e c3 5f c0 ec d3 1a c2
-42 8a 29 45 5b 6f 73 a2
-47 43 52 c1 d7 42 87 2
-b8 a9 6e 60 c2 78 72 d4
-92 79 c2 f6 55 80 44 ea
-e6 f3 c9 79 1b 8c 82 7e
-5c 5d b3 83 74 14 a6 aa
-ab 80 e1 d1 14 53 9a f1
-22 29 6a c6 81 c9 41 b5
-23 a9 9a e9 98 b7 ef be
-a2 56 6e 62 8 a6 eb b9
-aa 8 18 81 d5 e0 f4 b6
-d8 9d 81 38 d7 f5 b9 aa
-de 75 c2 9c 38 38 60 eb
-1 f6 aa 67 fa 40 0 b7
-9c 9 3c 79 6f 68 26 ad
-9b 9b 2d 53 bf 4e 54 51
-1 1d 6a 9a 65 57 7d 8d
-62 5 90 9a b2 2a 8b 2b
-69 4b 72 c0 49 31 da 5c
-54 ed 97 1f a1 1b ba 34
-73 6b ba ec 87 5d f0 2b
-ac 4b 48 2 99 ac 35 9d
-fa 96 e5 5f cb 84 b6 4b
-e9 59 e7 a5 e6 a4 92 d8
-1c 25 d9 9a 4 90 60 4d
-c8 90 fa a8 16 e a6 96
-36 b2 bc 5e 5e a9 63 3
-45 a9 45 ed f5 32 86 c8
-e5 15 f1 ab 46 39 74 7d
-9d 9c ce 94 91 98 86 9e
-5 67 1e c4 69 e9 88 c
-4d a4 d9 fe 37 b 3c 8a
-b5 2 28 28 b4 a1 d5 41
-13 38 eb cd 73 92 7c 3c
-50 7e 34 99 55 8a cf ed
-eb 11 ca e1 12 78 5d a6
-74 b4 a7 19 b7 e 2b 21
-12 2a 7a 5b 22 45 32 f9
-fe bd 26 e7 88 d6 de 2e
-6 ba 41 9d f0 c1 90 a5
-b f3 96 84 b6 ca 1d a6
-83 3b a4 47 9 f7 4e 5c
-f7 ed 1c b3 6c 13 5e 59
-86 66 66 3b 39 2f 7f f
-61 86 1d 74 19 1b 55 57
-4d 34 8f 99 8d f1 79 ee
-24 d7 3e 8 69 8b f7 f3
-54 dd 61 c2 53 8 d0 6b
-5e 37 63 ef 48 4b 79 bd
-58 db 63 58 18 7c 5a 37
-6c 41 b3 eb e5 85 51 87
-57 e7 5a 3b a8 95 2c 42
-eb cd 92 fe ac a1 32 60
-8d fa 4a 8d 11 de 9b be
-b7 f5 a4 67 4a 49 13 9b
-77 4c 78 ae 9f 1f 3b 1b
-ee 11 d0 a8 ac 65 28 c7
-d3 57 6a 3f e0 61 e2 b
-ee ba 39 82 ff 1e e7 b7
-9d d4 e4 22 a1 ed a5 7f
-52 c9 46 f6 b1 df 3 7b
-12 bc ec 77 ee 4b d9 a7
-f7 57 9a 44 6d 4e 73 64
-b0 48 c7 a0 15 46 12 f5
-fc be 1c ef 21 57 6b 3
-32 f0 f8 3d a2 e6 26 1a
-bd 96 ef b6 fb 20 60 2a
-98 6e 46 2f 63 74 29 6
-d6 b8 79 9c 66 15 7 e8
-1c bb b6 98 65 79 72 eb
-25 3e 5f e0 11 dc 55 90
-3d f 8c d8 f4 be 93 3a
-c7 80 87 4 e8 61 80 b2
-b8 e4 4e 90 9d 4c 64 a3
-19 17 14 c9 18 ca fc 1f
-88 f4 c0 a2 2e 6c f9 18
-b7 dc 6c 30 d 83 7e e8
-ec 35 e7 2e b4 a7 a6 ca
-80 e9 34 7a 76 33 fb 5e
-60 e3 9 96 7c c6 0 29
-8f 96 51 28 3f c3 a9 12
-a2 75 aa 7a 11 d2 de e7
-42 7c e8 fa 95 5d fc d6
-ae a6 90 bb 43 14 53 f4
-36 74 5e f3 e6 69 a9 ba
-c1 6d bf 7b 1d 15 b5 82
-48 98 58 52 dd 91 a5 e
-59 3 7d 1b ed 9e 99 2
-95 40 ba 9a 68 bd 25 65
-31 e3 4e 3a 3f b8 d3 24
-79 5 ab 8a b5 17 9f 8f
-49 c4 f8 bb e1 ac 79 da
-92 c0 8f 24 2f 8 c6 9d
-db a0 7f bf df 3 e0 55
-bd 8b b a9 85 38 91 e1
-66 b0 28 a5 87 86 9c 5
-17 be 3 9a a2 90 34 ea
-a6 6c 79 10 66 3e 83 9c
-fd f2 9e b8 b5 3a 25 8b
-99 8e 37 e1 48 74 aa b
-c 1 3f 3 2a 9f 17 d4
-7b f 66 38 3b b1 65 82
-20 3 8d be ae 67 1 16
-c9 28 4b 76 8b be 4b 73
-57 51 6b 68 2e 7b 17 e2
-40 52 6c 3d c6 a5 2f 8e
-e 84 0 c3 d7 5 ce 9
-de 45 8d 6d b8 ad 26 c5
-e2 76 af d1 16 6e db 9c
-df fb b4 28 6f 60 87 49
-b0 3f 1e d1 98 5e 34 ed
-c1 ad 25 ce 38 87 e5 8b
-94 38 32 45 4a bf d 8b
-40 d4 65 0 9f 2b 15 3b
-ed fa 11 ee 5a b9 db 49
-59 28 3a a0 72 96 2e 4a
-56 5f 1e cc 33 b5 53 37
-49 a3 a9 ce bd 4f 83 eb
-ad 7f ff 22 84 5d 6a a6
-8e 7e f6 eb ce 20 aa 8d
-f b3 99 70 38 9a 56 27
-e4 32 a6 99 32 12 77 e1
-d8 94 11 76 7e 94 8b 8b
-49 77 7f b8 b5 6f 0 da
-a7 fc cc 36 c2 b5 be e4
-f9 48 85 6a 64 be 9a a6
-57 3 6f f1 b0 a5 e4 81
-71 dc fe f 8e c9 da b9
-6 2 df 29 37 4e 32 f5
-6e ac 6e 48 bd 9a 94 c2
-11 93 40 9d 83 d8 1e 10
-ee 73 9b f7 c1 78 df b3
-15 8e f9 4e 1 ad 5c e3
-2d 28 89 3c a5 ee d bc
-ef c ae 7f 5f 75 e1 bf
-a8 5 7e 79 b6 c3 b6 50
-bb 66 44 b0 88 1a e2 36
-1d 83 fe 4e 82 1 ad 1d
-d8 36 df a1 aa c4 d4 17
-88 5b ce 9c d6 f2 8 17
-e1 53 e6 55 32 dd 6d 75
-27 85 f4 85 be 1d 1b 6d
-b4 d9 fc b ce d a1 9f
-75 3b b5 69 88 4d 7d 90
-6d 1e 8 46 69 3e a5 28
-32 f6 94 ea c1 89 1 33
-6b bd 2d c5 32 99 ee e0
-58 6f 59 e8 35 1c bc 45
-4a 8d d2 8a 95 86 31 d8
-26 9e 7 84 f1 8d 5 f7
-e6 aa 9a d6 3e ae 64 62
-18 bd e3 20 43 a7 6f bb
-5d 6a 6b 29 1c fb bb d
-eb 45 72 5c b8 71 d0 42
-c 68 6b 46 5b 95 ab ac
-9d ef 7a 1a 1d 36 3c 7d
-90 7c fd 2d 68 e6 e9 4e
-6a b3 0 79 7d 7d 9 9c
-c5 bf c7 1e f0 97 6a 46
-cf cc 48 dd 28 11 cc 11
-ca 8a ae 9b e0 90 64 24
-8a b1 d8 e4 a9 fa 5a 8c
-fa 77 d7 66 66 fa 4b b9
-97 1b 73 71 ce 80 c7 ff
-f3 5e a7 7e ed 3f d4 16
-33 5 21 a5 a3 2e 69 9b
-92 59 c3 25 23 8 f4 8d
-dc a6 25 e0 76 cc d5 d0
-f3 bf 10 dc f6 3d e0 ad
-4e 78 4 c3 d3 62 df 50
-75 2b b3 64 91 7 e 49
-86 34 84 30 88 3b 9d c
-b3 75 11 bd 63 d0 32 71
-c2 d3 a9 47 a2 df 64 34
-8c b6 cf 2a 18 41 41 76
-7e 8d b8 69 6d 16 c9 3a
-1b 48 d1 2a 9c 42 70 e9
-77 dc 38 38 76 eb a0 cf
-be c3 3e 80 1e fd 35 9b
-ab 79 eb 94 8c a6 ff e3
-11 0 7a 2b a da 43 9e
-56 5d d8 9f b9 d0 3b a8
-f3 19 29 6d d 82 91 41
-f5 c0 44 b9 4d 31 e8 8e
-7f 65 32 c7 14 e0 53 17
-46 1c b2 83 d3 d4 dc 47
-13 7f b8 fa 4c 1a ff f0
-45 2a ea df 18 1 2c c4
-4c 3f 22 7 23 9b 48 dd
-2f e3 ef ed 2b 41 2c 35
-7 bf 13 2f 44 c 25 2f
-82 80 6 e 56 5d 72 d
-61 57 72 f2 9d 55 ca 77
-fa 79 b5 e4 29 5e d3 fa
-b6 a0 62 13 5c a0 ac 86
-94 88 c0 50 6f 8c 64 f0
-a5 73 49 91 ec 55 80 6e
-8e a6 2c 71 35 72 79 1d
-9 ea cc ae fc 1e 3c 7f
-64 b 3f aa c9 d8 a8 f5
-0 5c d0 ec 78 e3 13 49
-d3 32 7e 9c b8 c7 c6 27
-e6 64 7b a 8d ce 7c 9f
-d8 d2 ad 27 ce 88 e7 a5
-5a db 30 a a7 48 2b 91
-b1 e5 d1 6c 19 a4 61 a0
-38 d8 95 2c 75 f8 16 71
-db a3 30 cd e5 e4 c9 88
-9c b6 8f f3 e3 ca 70 ce
-11 87 4f ea c0 51 f3 f
-e4 d 43 1f 1e e5 b0 7a
-52 48 f1 a4 76 34 f6 25
-ad b7 16 b0 94 b2 8a 87
-da e0 1e 1d 16 16 25 fc
-d4 cb ac e9 f0 db f3 45
-27 87 18 b5 ea c0 15 5
-75 a4 ec 49 20 48 20 45
-f5 b8 67 e 81 3b 9c f0
-ef db fa 92 52 23 87 58
-41 2a cd 8 a8 d0 cf af
-dd 47 3b c5 f1 d5 db 8f
-48 d7 51 c4 6c 8 3 73
-1d 3 53 23 ac 6 13 3b
-88 f8 38 a4 19 ac cd ac
-cc 67 29 2d 6e 9f 63 ee
-be 5 6 48 3c c5 1 c
-47 c e1 a4 66 ca 41 77
-e5 b9 80 92 a3 9c b4 84
-2a cc df 88 0 f0 60 e9
-3c b ac a2 5b bb 3d 44
-54 be ca 1c e9 b9 b7 94
-3f 34 ce d9 b0 e9 2f be
-e0 3d 85 df e e 7a 9
-ac af 6c d9 30 30 60 a2
-2c e2 36 94 9c 19 1e 19
-7e 33 4a 82 a8 d9 e5 e2
-d5 84 43 3a 0 43 59 d6
-f5 ba 6e f6 24 6d 12 af
-b7 3e 4f 13 e7 34 1e 8f
-8b 7d 1c 94 f1 b6 7d 7a
-f1 68 40 a0 3e d5 a4 d7
-ff f5 da 0 9e bb fb f3
-de 9c 3b a2 33 51 5f 7e
-4d da 6c 18 f5 c6 a0 b
-1d b1 a6 1a 31 e 4 94
-b3 26 d7 ff 6 60 c2 f5
-89 c2 24 48 e7 b7 88 6c
-ac 12 61 16 1c 53 f6 20
-3f 28 9b af 40 35 21 97
-f7 17 8f fd c4 a6 11 3d
-9e 7a 30 e 6b b0 43 e4
-91 ee 24 95 cc a3 27 3f
-42 93 48 68 d4 92 a3 65
-b6 8f 28 0 41 d4 8e 54
-7 8b 88 fc 27 83 36 6c
-e3 34 de 9e 6f 0 db f0
-b bb d4 4c 53 6d 31 89
-d5 56 cb 10 e4 31 e2 c2
-ab bc 53 19 84 78 a 8d
-8a ad b4 38 6c b1 b9 bc
-84 68 69 64 27 e 75 89
-3e 33 a0 36 15 7 b5 e
-73 d7 bb 6e e9 d7 67 ce
-6f 21 d1 6c 2c fd 6a 2b
-94 63 2d b7 b8 bd 15 ed
-d8 f0 ce 7a 3d 9d af c1
-45 a3 e6 2 bf e8 f4 b7
-78 59 5c 41 16 2e 96 c4
-23 72 4a 4e 6c c2 ba 3e
-8c 54 7f e3 c3 3b 77 63
-b e8 fd de 6d f3 5b d2
-90 1b 7c c0 92 8b e5 f
-1a 5f e6 31 ad 65 c 4
-41 27 d9 7a f 29 b6 7b
-ad 6e 28 9 5b 41 42 a5
-9c 31 5a f1 8 5c ff 96
-60 f0 29 67 e3 ee b2 c6
-df 31 5 46 8a af 14 91
-12 fd 8f 8c f1 18 52 b8
-86 61 1e db e1 e9 8b de
-de ef 3d f9 74 a6 56 c
-4e 3a 2b 50 9b 15 39 2e
-22 5d 59 6e 98 c1 33 94
-35 75 f0 86 84 7a 33 72
-7a 22 49 ee ca d3 9e 60
-77 b 72 9f aa a3 cd da
-c5 57 b0 b8 b7 85 8c c1
-91 34 f7 fb 59 57 9d d8
-1e 53 74 4f 4c bf 33 48
-41 6a 4 3c 1f a1 77 1c
-e4 b1 ba 72 b7 aa 7 c6
-83 66 5d 42 c9 c9 72 98
-b2 49 e7 23 63 b0 bd 4c
-94 20 7 2f 63 57 e1 7d
-65 34 a0 a3 fe 7a 4a 2b
-f2 d2 48 63 3b 16 59 3b
-1c cc ca 73 76 f0 e4 f5
-59 f5 a4 7f de e b1 84
-33 a9 8a 54 f6 3b fe 7a
-c7
+      <a name="contents">addr/data: 16 32
+256*0 fffffff7 ffffffa5 59 ffffffb0 fffffff3 ffffffdb ffffffbe
+32 ffffff9f ffffffa4 3e ffffff9a ffffffb9 ffffffe4 55
+22 ffffff97 ffffffd2 73 ffffffab 6c ffffffee ffffffde
+ffffffd0 ffffffc9 32 ffffffd6 38 67 ffffff87 fffffff9
+2c 23 7a ffffffe8 69 49 2f 2b
+36 14 ffffff95 51 ffffffb7 75 ffffffdb 5b
+ffffff83 13 22 5a 75 ffffff93 73 57
+ffffffbf 18 fffffff2 72 44 d 54 4d
+25 21 ffffff8d ffffffaa ffffff9c ffffff93 ffffffce 52
+9 ffffffaf ffffffae 38 4a ffffff97 ffffffa6 ffffffde
+4f 46 ffffffc3 fffffff8 ffffffec ffffffd2 ffffff96 4e
+fffffff1 fffffff1 6e ffffffe6 77 ffffffbd ffffffc9 61
+7c ffffffbb 6 ffffffa5 ffffffb2 19 5f ffffffbc
+ffffff93 36 17 fffffffb ffffffb8 68 ffffffef 66
+6b fffffff8 ffffffde 53 7a 71 0 4c
+4e 1a ffffffcd 39 3b ffffffc0 ffffff8e ffffffbe
+18 ffffffb8 d ffffffe2 12 23 ffffff8c fffffff0
+ffffffbd 73 fffffff7 ffffffa1 6b 2e 5c 7a
+ffffffc1 fffffff2 ffffff9a 73 ffffff86 ffffffb8 58 ffffffd9
+ffffffbe 5c 39 74 fffffff7 5c 4d ffffffec
+ffffffe2 ffffffdf ffffffca 68 24 fffffff9 fffffffb 77
+6e 2d 77 33 ffffffca 32 ffffff96 ffffffa3
+38 fffffffa 21 61 79 ffffffef 48 7c
+2a 7f ffffffd8 ffffff9f 13 ffffffda ffffffad 72
+ffffffc0 fffffffa 64 40 51 ffffffe3 55 ffffffd9
+ffffff8e 2c ffffffc0 ffffffb9 3e ffffffbd 45 69
+ffffffb8 ffffffd9 ffffff99 24 ffffffba 5e 76 ffffffbe
+79 4b ffffffd3 ffffffc1 fffffff8 ffffff83 55 ffffffd9
+ffffff9c ffffffd0 4 71 0 2a 41 ffffff9d
+6 38 fffffff7 3a 2e 16 11 53
+2a 58 2b ffffffc6 ffffffb1 4e ffffff8b 26
+ffffff93 ffffff89 52 ffffffe3 d ffffff9e ffffffee ffffffa8
+5e 29 ffffffd2 4 ffffff99 14 69 4b
+ffffffbd 18 47 ffffffbe 2 ffffff84 ffffffa1 ffffffe9
+75 3d ffffffff 4c ffffffc6 5 2f 3d
+60 ffffffff 7c c ffffffba 72 20 68
+ffffffec ffffffcd fffffff6 0 ffffff85 ffffffea 73 6d
+ffffff9b ffffff96 ffffffd7 4e 22 51 ffffff9f ffffffb4
+ffffff81 51 3d ffffffc0 62 ffffffcd a ffffff8b
+ffffffc9 77 7b 45 68 49 ffffff93 ffffffa0
+30 ffffff84 ffffff98 6e 2b fffffff5 9 ffffff88
+ffffff88 7a ffffffce fffffff2 fffffff7 ffffffc4 ffffffb1 3c
+37 5d c 2a ffffffec ffffffec ffffffc4 ffffff97
+ffffffb5 ffffffb7 75 ffffff95 7e 6a ffffffee ffffffd9
+12 16 ffffffdf 56 fffffff3 7b ffffffd1 27
+6d ffffff8a 55 ffffffb1 ffffffe8 24 ffffff80 8
+7e 28 ffffff96 ffffff92 ffffffcd ffffffac 4 ffffffe9
+d ffffff89 ffffff93 5 64 1d ffffffda ffffff9a
+78 4b fffffff4 ffffffbf 46 ffffffc6 73 ffffffd0
+32 ffffff8f ffffff94 ffffff94 5e ffffffbb ffffffb3 ffffffa1
+3e 79 1 fffffffe 6b 53 73 a
+ffffffb8 ffffffb4 fffffffd ffffff9d ffffff83 ffffffa9 0 6c
+4c ffffffeb 0 ffffffb1 ffffff8b 1d ffffff99 b
+ffffffbd 51 ffffffb3 ffffffa2 ffffffbf ffffffd0 fffffff4 ffffff8e
+60 1a 76 79 31 2b ffffffb9 ffffff82
+ffffff9e 0 ffffffdb 64 41 58 6 ffffffd7
+75 ffffffbf 28 36 2a ffffffc7 ffffffe9 61
+fffffff8 ffffff98 ffffffda ffffffe4 75 ffffffab ffffffe9 58
+ffffffcb ffffffd2 1d 9 ffffff84 7b 7e ffffffd8
+ffffffa7 34 54 63 9 71 ffffff94 62
+ffffffdc ffffff8d ffffff97 54 ffffff8b e d 5a
+ffffffca 2d 30 61 ffffffe8 ffffff94 3c ffffff87
+67 69 1d ffffffb7 ffffffce ffffff8b 6a ffffff95
+ffffffbc 1a ffffff92 ffffffa1 40 3d 54 ffffff96
+68 1e 74 13 17 39 ffffffab 7d
+1b ffffffd6 ffffffde 22 7e ffffffd3 ffffff93 ffffffa2
+1c ffffffa7 ffffffa0 ffffff8a 76 ffffffa3 24 41
+ffffffc4 79 ffffffbb 27 50 2 ffffffec fffffffa
+1 3b ffffffe6 7c 35 ffffff90 6c 52
+ffffffd4 5d c 2f ffffffa1 ffffffb1 ffffff96 31
+ffffffd3 54 ffffffcc ffffff8a ffffffe4 a 56 63
+ffffffa8 19 fffffff8 fffffffc ffffffa0 9 6 17
+ffffff8f ffffffaa 16 ffffff96 4e 5b fffffff7 63
+ffffffdc ffffff88 ffffffe2 ffffff8f ffffffb9 74 ffffffef ffffffbd
+73 38 ffffffca ffffffc1 ffffff80 a ffffffa6 ffffff83
+4e ffffffc2 70 29 ffffff98 ffffff9a 48 75
+fffffffb 35 2c 6a ffffffc9 ffffffe2 fffffff6 35
+1b 21 ffffff88 4b 2c 65 44 ffffffce
+ffffffe5 1b ffffffc2 34 ffffffb3 ffffffeb ffffffbc 2a
+ffffffa0 3d 4d ffffffb5 ffffffa1 fffffffe 5a ffffff9b
+2c ffffffa3 50 0 e 6d f 53
+7a ffffffee 25 6a 64 ffffffcc 3f ffffffeb
+f ffffffc5 ffffffdb ffffffee ffffffe5 fffffff3 42 ffffffe0
+ffffff86 50 ffffffb5 ffffffaa 22 7b ffffffe6 11
+b ffffffbb ffffffa9 5f ffffff85 44 ffffffeb 43
+ffffffe0 ffffffb9 ffffffe2 fffffff5 ffffffc8 fffffff2 ffffff86 ffffff9d
+ffffffdb fffffffe 3f fffffff5 7c 6b ffffffdf 2c
+ffffffe6 ffffffc4 ffffffd1 d ffffff84 5a ffffff93 60
+7f 47 61 ffffff90 ffffff97 ffffffb0 32 ffffff8d
+35 49 ffffffe7 fffffff3 ffffffc1 1d ffffffc2 6b
+31 ffffff8f 14 51 ffffffe2 ffffff9b 3a ffffff97
+ffffffaa 61 ffffffc9 ffffffe8 2d ffffffe4 8 10
+70 e ffffff9e ffffff9a ffffffab fffffff7 ffffff8c ffffffba
+62 66 5c 6d ffffffb6 ffffff97 ffffff9a ffffffde
+fffffff8 3e ffffff83 b 7e ffffffcb fffffffc ffffffa8
+ffffffba fffffff0 ffffffc5 43 ffffff87 60 ffffffee ffffffa8
+ffffffc6 ffffffd8 ffffff89 ffffff86 29 62 ffffffa0 52
+4e ffffffd8 69 6b f ffffffa7 ffffffb8 7e
+18 ffffffd5 ffffffb4 2b ffffffb9 44 ffffffcd ffffffe8
+fffffffc 37 ffffffed 25 fffffffa 15 ffffffed ffffffb1
+6a 6d 4a 5c 7a 3a 18 ffffffdc
+ffffffe1 67 36 fffffff4 34 ffffff94 ffffffc2 ffffffd2
+79 1a ffffffcf ffffffb8 fffffff9 4c 55 ffffffdf
+5a 0 68 ffffff97 ffffffec 4d ffffffad ffffffb2
+43 ffffff95 8 22 5 ffffffc5 ffffff9a ffffffe1
+4 ffffffdb ffffffea 10 ffffff8e ffffffa8 61 63
+4 ffffffd7 fffffffb ffffffbb ffffffa9 2d 3b 14
+ffffffbb 11 60 ffffffa1 ffffffc7 4f ffffffd5 34
+39 18 ffffffed ffffffe3 32 4d ffffffcf ffffffe8
+ffffff9e fffffffc ffffffae ffffffc9 ffffff84 2a 3d ffffffb8
+ffffff9f ffffffd2 62 3b 2e 2d 29 f
+8 34 fffffffb 4a fffffff2 62 e ffffffbf
+34 ffffffbe 1f ffffffa5 6a 18 5f 7a
+ffffff97 ffffff92 ffffffaa 24 7f 62 fffffffe 5a
+35 ffffffd5 2a 41 fffffff2 ffffff96 ffffffc5 59
+28 30 61 ffffff9a ffffffd6 ffffffd0 1 ffffffda
+1d 4f ffffffc7 71 13 70 fffffff1 1e
+ffffffd7 65 6 2c ffffffe5 ffffff98 4c ffffffd0
+ffffffab ffffffa7 7c ffffffd5 5c ffffffaf ffffffb8 7a
+3 ffffffcc ffffffbc ffffff9a ffffffda ffffffe0 54 d
+ffffffdc ffffff94 d 4e ffffff98 ffffff9c 2f 5d
+47 3e ffffffe9 ffffffe7 20 14 ffffffce ffffffa3
+ffffffeb f ffffff80 fffffffe ffffffd4 ffffffc0 ffffffaa fffffff9
+ffffff81 ffffffd2 33 52 66 ffffffda ffffffaf ffffffe1
+57 53 19 45 5e ffffffe3 ffffffbf ffffffbf
+ffffffce ffffffe3 7d 5d ffffff98 1e 2d 5a
+ffffffdc ffffffd7 5d ffffffc4 ffffffc3 10 43 5f
+ffffff8b 9 ffffffed ffffffc9 ffffffe3 6 ffffffbc ffffffde
+78 55 12 5d ffffffcf ffffff8f 4a ffffffcb
+55 1d ffffffe8 ffffff97 ffffffb3 fffffffe 11 7e
+67 ffffffc6 3d 31 ffffff90 ffffffe9 2a 34
+8 39 13 8 ffffffb7 ffffffad 21 ffffff8c
+26 63 22 ffffff9f 52 ffffffe7 78 a
+ffffffc2 ffffffb5 53 ffffff9d ffffffdb fffffffc 22 ffffff97
+73 ffffffa4 46 4a ffffffa3 ffffff92 8 ffffffff
+ffffffe1 2a ffffffcd 16 4d 15 ffffff88 71
+4a 43 6f 13 50 33 fffffff0 3
+ffffffff 72 ffffffe6 76 78 60 8 2c
+ffffffe8 39 ffffffa1 1a 65 53 ffffff85 48
+fffffffc ffffffa4 43 fffffffc a ffffff87 ffffff97 18
+ffffffca ffffffbf 22 ffffffc0 2f ffffffbb 5c 3f
+fffffff4 1b ffffffc9 2a fffffff0 73 6a ffffffc6
+ffffffae 4d 76 ffffffa6 3d 74 49 ffffff98
+43 6f ffffff9c ffffffc2 58 4b fffffff6 7
+ffffff90 ffffff9e 62 ffffffae 59 ffffffc7 62 45
+ffffff88 7a 23 ffffffc3 ffffffad 7b fffffff1 ffffffec
+ffffffae ffffffa9 ffffffed fffffff9 ffffff93 3d fffffffc 77
+ffffff9e 54 2 6f ffffff9e ffffffaa 4f ffffffc6
+ffffff84 ffffffa7 59 ffffffe7 36 ffffff9f ffffffab ffffff9e
+ffffffa3 56 1d 47 16 ffffffc1 45 27
+ffffffcf 13 2d 19 ffffffcf fffffff7 45 6c
+fffffff3 19 ffffff9b b 44 ffffffea 49 ffffffde
+ffffff8d ffffffa4 2d 70 2c ffffff8c ffffffdf ffffffd2
+2d 76 ffffffdf ffffffbe ffffff94 ffffff8e e fffffffe
+fffffff9 54 5f e 5a ffffffe8 ffffffce 0
+2c ffffff87 ffffff90 ffffff9f ffffffb3 55 ffffff8b ffffffd7
+ffffff93 5c 8 54 ffffffa6 ffffffd4 ffffffa6 68
+e ffffffa4 ffffff91 31 ffffff8e 28 fffffff4 fffffffa
+15 35 ffffffab ffffffe1 ffffff9b 59 3d ffffffba
+30 67 9 33 52 31 ffffffbe 38
+7e ffffff97 10 ffffff98 9 ffffffc0 ffffffa8 ffffffe8
+2f ffffffa7 5b ffffffa7 6c ffffffd9 ffffff9e ffffffa3
+a 7c 39 ffffff9a fffffffb ffffff93 3b 23
+ffffffe8 7f 2d ffffffce ffffff89 ffffffc8 ffffff8a ffffff8a
+37 1d 6d 47 ffffffbe ffffff99 ffffff8c ffffffdc
+78 47 65 29 ffffff96 ffffffe8 ffffffb6 ffffff80
+ffffffc0 fffffff3 31 40 ffffffe1 ffffffdc 70 ffffffc3
+3b ffffff99 26 79 ffffffc1 61 ffffff97 54
+ffffffa5 ffffffb6 49 67 2e ffffffa5 fffffffb ffffffc9
+ffffffcf 4c ffffffd6 ffffffbf 75 ffffff9c ffffffe2 19
+20 60 ffffffbb ffffffdc ffffffb5 7e ffffff83 21
+11 7b 1a 3c 61 44 ffffff8c 1f
+ffffffb0 2a ffffffcb 0 ffffffc1 2e ffffff9d 3a
+1e 7e ffffffd7 70 70 3f ffffffcb fffffff8
+11 ffffff8d fffffffe 75 ffffffdf ffffffbf 1e ffffffc5
+53 ffffffef 32 1e ffffffd1 ffffffb8 13 73
+41 41 1a 1c ffffffdd 7a 1a ffffffb5
+4c ffffffa5 ffffff90 45 fffffff0 18 18 ffffffa2
+7b 40 23 14 ffffffc8 ffffffe9 ffffffe7 38
+ffffffe8 ffffffbb ffffff96 27 7a 7 ffffffd2 ffffffd7
+3e ffffffc3 5f ffffffc0 ffffffec ffffffd3 1a ffffffc2
+42 ffffff8a 29 45 5b 6f 73 ffffffa2
+47 43 52 ffffffc1 ffffffd7 42 ffffff87 2
+ffffffb8 ffffffa9 6e 60 ffffffc2 78 72 ffffffd4
+ffffff92 79 ffffffc2 fffffff6 55 ffffff80 44 ffffffea
+ffffffe6 fffffff3 ffffffc9 79 1b ffffff8c ffffff82 7e
+5c 5d ffffffb3 ffffff83 74 14 ffffffa6 ffffffaa
+ffffffab ffffff80 ffffffe1 ffffffd1 14 53 ffffff9a fffffff1
+22 29 6a ffffffc6 ffffff81 ffffffc9 41 ffffffb5
+23 ffffffa9 ffffff9a ffffffe9 ffffff98 ffffffb7 ffffffef ffffffbe
+ffffffa2 56 6e 62 8 ffffffa6 ffffffeb ffffffb9
+ffffffaa 8 18 ffffff81 ffffffd5 ffffffe0 fffffff4 ffffffb6
+ffffffd8 ffffff9d ffffff81 38 ffffffd7 fffffff5 ffffffb9 ffffffaa
+ffffffde 75 ffffffc2 ffffff9c 38 38 60 ffffffeb
+1 fffffff6 ffffffaa 67 fffffffa 40 0 ffffffb7
+ffffff9c 9 3c 79 6f 68 26 ffffffad
+ffffff9b ffffff9b 2d 53 ffffffbf 4e 54 51
+1 1d 6a ffffff9a 65 57 7d ffffff8d
+62 5 ffffff90 ffffff9a ffffffb2 2a ffffff8b 2b
+69 4b 72 ffffffc0 49 31 ffffffda 5c
+54 ffffffed ffffff97 1f ffffffa1 1b ffffffba 34
+73 6b ffffffba ffffffec ffffff87 5d fffffff0 2b
+ffffffac 4b 48 2 ffffff99 ffffffac 35 ffffff9d
+fffffffa ffffff96 ffffffe5 5f ffffffcb ffffff84 ffffffb6 4b
+ffffffe9 59 ffffffe7 ffffffa5 ffffffe6 ffffffa4 ffffff92 ffffffd8
+1c 25 ffffffd9 ffffff9a 4 ffffff90 60 4d
+ffffffc8 ffffff90 fffffffa ffffffa8 16 e ffffffa6 ffffff96
+36 ffffffb2 ffffffbc 5e 5e ffffffa9 63 3
+45 ffffffa9 45 ffffffed fffffff5 32 ffffff86 ffffffc8
+ffffffe5 15 fffffff1 ffffffab 46 39 74 7d
+ffffff9d ffffff9c ffffffce ffffff94 ffffff91 ffffff98 ffffff86 ffffff9e
+5 67 1e ffffffc4 69 ffffffe9 ffffff88 c
+4d ffffffa4 ffffffd9 fffffffe 37 b 3c ffffff8a
+ffffffb5 2 28 28 ffffffb4 ffffffa1 ffffffd5 41
+13 38 ffffffeb ffffffcd 73 ffffff92 7c 3c
+50 7e 34 ffffff99 55 ffffff8a ffffffcf ffffffed
+ffffffeb 11 ffffffca ffffffe1 12 78 5d ffffffa6
+74 ffffffb4 ffffffa7 19 ffffffb7 e 2b 21
+12 2a 7a 5b 22 45 32 fffffff9
+fffffffe ffffffbd 26 ffffffe7 ffffff88 ffffffd6 ffffffde 2e
+6 ffffffba 41 ffffff9d fffffff0 ffffffc1 ffffff90 ffffffa5
+b fffffff3 ffffff96 ffffff84 ffffffb6 ffffffca 1d ffffffa6
+ffffff83 3b ffffffa4 47 9 fffffff7 4e 5c
+fffffff7 ffffffed 1c ffffffb3 6c 13 5e 59
+ffffff86 66 66 3b 39 2f 7f f
+61 ffffff86 1d 74 19 1b 55 57
+4d 34 ffffff8f ffffff99 ffffff8d fffffff1 79 ffffffee
+24 ffffffd7 3e 8 69 ffffff8b fffffff7 fffffff3
+54 ffffffdd 61 ffffffc2 53 8 ffffffd0 6b
+5e 37 63 ffffffef 48 4b 79 ffffffbd
+58 ffffffdb 63 58 18 7c 5a 37
+6c 41 ffffffb3 ffffffeb ffffffe5 ffffff85 51 ffffff87
+57 ffffffe7 5a 3b ffffffa8 ffffff95 2c 42
+ffffffeb ffffffcd ffffff92 fffffffe ffffffac ffffffa1 32 60
+ffffff8d fffffffa 4a ffffff8d 11 ffffffde ffffff9b ffffffbe
+ffffffb7 fffffff5 ffffffa4 67 4a 49 13 ffffff9b
+77 4c 78 ffffffae ffffff9f 1f 3b 1b
+ffffffee 11 ffffffd0 ffffffa8 ffffffac 65 28 ffffffc7
+ffffffd3 57 6a 3f ffffffe0 61 ffffffe2 b
+ffffffee ffffffba 39 ffffff82 ffffffff 1e ffffffe7 ffffffb7
+ffffff9d ffffffd4 ffffffe4 22 ffffffa1 ffffffed ffffffa5 7f
+52 ffffffc9 46 fffffff6 ffffffb1 ffffffdf 3 7b
+12 ffffffbc ffffffec 77 ffffffee 4b ffffffd9 ffffffa7
+fffffff7 57 ffffff9a 44 6d 4e 73 64
+ffffffb0 48 ffffffc7 ffffffa0 15 46 12 fffffff5
+fffffffc ffffffbe 1c ffffffef 21 57 6b 3
+32 fffffff0 fffffff8 3d ffffffa2 ffffffe6 26 1a
+ffffffbd ffffff96 ffffffef ffffffb6 fffffffb 20 60 2a
+ffffff98 6e 46 2f 63 74 29 6
+ffffffd6 ffffffb8 79 ffffff9c 66 15 7 ffffffe8
+1c ffffffbb ffffffb6 ffffff98 65 79 72 ffffffeb
+25 3e 5f ffffffe0 11 ffffffdc 55 ffffff90
+3d f ffffff8c ffffffd8 fffffff4 ffffffbe ffffff93 3a
+ffffffc7 ffffff80 ffffff87 4 ffffffe8 61 ffffff80 ffffffb2
+ffffffb8 ffffffe4 4e ffffff90 ffffff9d 4c 64 ffffffa3
+19 17 14 ffffffc9 18 ffffffca fffffffc 1f
+ffffff88 fffffff4 ffffffc0 ffffffa2 2e 6c fffffff9 18
+ffffffb7 ffffffdc 6c 30 d ffffff83 7e ffffffe8
+ffffffec 35 ffffffe7 2e ffffffb4 ffffffa7 ffffffa6 ffffffca
+ffffff80 ffffffe9 34 7a 76 33 fffffffb 5e
+60 ffffffe3 9 ffffff96 7c ffffffc6 0 29
+ffffff8f ffffff96 51 28 3f ffffffc3 ffffffa9 12
+ffffffa2 75 ffffffaa 7a 11 ffffffd2 ffffffde ffffffe7
+42 7c ffffffe8 fffffffa ffffff95 5d fffffffc ffffffd6
+ffffffae ffffffa6 ffffff90 ffffffbb 43 14 53 fffffff4
+36 74 5e fffffff3 ffffffe6 69 ffffffa9 ffffffba
+ffffffc1 6d ffffffbf 7b 1d 15 ffffffb5 ffffff82
+48 ffffff98 58 52 ffffffdd ffffff91 ffffffa5 e
+59 3 7d 1b ffffffed ffffff9e ffffff99 2
+ffffff95 40 ffffffba ffffff9a 68 ffffffbd 25 65
+31 ffffffe3 4e 3a 3f ffffffb8 ffffffd3 24
+79 5 ffffffab ffffff8a ffffffb5 17 ffffff9f ffffff8f
+49 ffffffc4 fffffff8 ffffffbb ffffffe1 ffffffac 79 ffffffda
+ffffff92 ffffffc0 ffffff8f 24 2f 8 ffffffc6 ffffff9d
+ffffffdb ffffffa0 7f ffffffbf ffffffdf 3 ffffffe0 55
+ffffffbd ffffff8b b ffffffa9 ffffff85 38 ffffff91 ffffffe1
+66 ffffffb0 28 ffffffa5 ffffff87 ffffff86 ffffff9c 5
+17 ffffffbe 3 ffffff9a ffffffa2 ffffff90 34 ffffffea
+ffffffa6 6c 79 10 66 3e ffffff83 ffffff9c
+fffffffd fffffff2 ffffff9e ffffffb8 ffffffb5 3a 25 ffffff8b
+ffffff99 ffffff8e 37 ffffffe1 48 74 ffffffaa b
+c 1 3f 3 2a ffffff9f 17 ffffffd4
+7b f 66 38 3b ffffffb1 65 ffffff82
+20 3 ffffff8d ffffffbe ffffffae 67 1 16
+ffffffc9 28 4b 76 ffffff8b ffffffbe 4b 73
+57 51 6b 68 2e 7b 17 ffffffe2
+40 52 6c 3d ffffffc6 ffffffa5 2f ffffff8e
+e ffffff84 0 ffffffc3 ffffffd7 5 ffffffce 9
+ffffffde 45 ffffff8d 6d ffffffb8 ffffffad 26 ffffffc5
+ffffffe2 76 ffffffaf ffffffd1 16 6e ffffffdb ffffff9c
+ffffffdf fffffffb ffffffb4 28 6f 60 ffffff87 49
+ffffffb0 3f 1e ffffffd1 ffffff98 5e 34 ffffffed
+ffffffc1 ffffffad 25 ffffffce 38 ffffff87 ffffffe5 ffffff8b
+ffffff94 38 32 45 4a ffffffbf d ffffff8b
+40 ffffffd4 65 0 ffffff9f 2b 15 3b
+ffffffed fffffffa 11 ffffffee 5a ffffffb9 ffffffdb 49
+59 28 3a ffffffa0 72 ffffff96 2e 4a
+56 5f 1e ffffffcc 33 ffffffb5 53 37
+49 ffffffa3 ffffffa9 ffffffce ffffffbd 4f ffffff83 ffffffeb
+ffffffad 7f ffffffff 22 ffffff84 5d 6a ffffffa6
+ffffff8e 7e fffffff6 ffffffeb ffffffce 20 ffffffaa ffffff8d
+f ffffffb3 ffffff99 70 38 ffffff9a 56 27
+ffffffe4 32 ffffffa6 ffffff99 32 12 77 ffffffe1
+ffffffd8 ffffff94 11 76 7e ffffff94 ffffff8b ffffff8b
+49 77 7f ffffffb8 ffffffb5 6f 0 ffffffda
+ffffffa7 fffffffc ffffffcc 36 ffffffc2 ffffffb5 ffffffbe ffffffe4
+fffffff9 48 ffffff85 6a 64 ffffffbe ffffff9a ffffffa6
+57 3 6f fffffff1 ffffffb0 ffffffa5 ffffffe4 ffffff81
+71 ffffffdc fffffffe f ffffff8e ffffffc9 ffffffda ffffffb9
+6 2 ffffffdf 29 37 4e 32 fffffff5
+6e ffffffac 6e 48 ffffffbd ffffff9a ffffff94 ffffffc2
+11 ffffff93 40 ffffff9d ffffff83 ffffffd8 1e 10
+ffffffee 73 ffffff9b fffffff7 ffffffc1 78 ffffffdf ffffffb3
+15 ffffff8e fffffff9 4e 1 ffffffad 5c ffffffe3
+2d 28 ffffff89 3c ffffffa5 ffffffee d ffffffbc
+ffffffef c ffffffae 7f 5f 75 ffffffe1 ffffffbf
+ffffffa8 5 7e 79 ffffffb6 ffffffc3 ffffffb6 50
+ffffffbb 66 44 ffffffb0 ffffff88 1a ffffffe2 36
+1d ffffff83 fffffffe 4e ffffff82 1 ffffffad 1d
+ffffffd8 36 ffffffdf ffffffa1 ffffffaa ffffffc4 ffffffd4 17
+ffffff88 5b ffffffce ffffff9c ffffffd6 fffffff2 8 17
+ffffffe1 53 ffffffe6 55 32 ffffffdd 6d 75
+27 ffffff85 fffffff4 ffffff85 ffffffbe 1d 1b 6d
+ffffffb4 ffffffd9 fffffffc b ffffffce d ffffffa1 ffffff9f
+75 3b ffffffb5 69 ffffff88 4d 7d ffffff90
+6d 1e 8 46 69 3e ffffffa5 28
+32 fffffff6 ffffff94 ffffffea ffffffc1 ffffff89 1 33
+6b ffffffbd 2d ffffffc5 32 ffffff99 ffffffee ffffffe0
+58 6f 59 ffffffe8 35 1c ffffffbc 45
+4a ffffff8d ffffffd2 ffffff8a ffffff95 ffffff86 31 ffffffd8
+26 ffffff9e 7 ffffff84 fffffff1 ffffff8d 5 fffffff7
+ffffffe6 ffffffaa ffffff9a ffffffd6 3e ffffffae 64 62
+18 ffffffbd ffffffe3 20 43 ffffffa7 6f ffffffbb
+5d 6a 6b 29 1c fffffffb ffffffbb d
+ffffffeb 45 72 5c ffffffb8 71 ffffffd0 42
+c 68 6b 46 5b ffffff95 ffffffab ffffffac
+ffffff9d ffffffef 7a 1a 1d 36 3c 7d
+ffffff90 7c fffffffd 2d 68 ffffffe6 ffffffe9 4e
+6a ffffffb3 0 79 7d 7d 9 ffffff9c
+ffffffc5 ffffffbf ffffffc7 1e fffffff0 ffffff97 6a 46
+ffffffcf ffffffcc 48 ffffffdd 28 11 ffffffcc 11
+ffffffca ffffff8a ffffffae ffffff9b ffffffe0 ffffff90 64 24
+ffffff8a ffffffb1 ffffffd8 ffffffe4 ffffffa9 fffffffa 5a ffffff8c
+fffffffa 77 ffffffd7 66 66 fffffffa 4b ffffffb9
+ffffff97 1b 73 71 ffffffce ffffff80 ffffffc7 ffffffff
+fffffff3 5e ffffffa7 7e ffffffed 3f ffffffd4 16
+33 5 21 ffffffa5 ffffffa3 2e 69 ffffff9b
+ffffff92 59 ffffffc3 25 23 8 fffffff4 ffffff8d
+ffffffdc ffffffa6 25 ffffffe0 76 ffffffcc ffffffd5 ffffffd0
+fffffff3 ffffffbf 10 ffffffdc fffffff6 3d ffffffe0 ffffffad
+4e 78 4 ffffffc3 ffffffd3 62 ffffffdf 50
+75 2b ffffffb3 64 ffffff91 7 e 49
+ffffff86 34 ffffff84 30 ffffff88 3b ffffff9d c
+ffffffb3 75 11 ffffffbd 63 ffffffd0 32 71
+ffffffc2 ffffffd3 ffffffa9 47 ffffffa2 ffffffdf 64 34
+ffffff8c ffffffb6 ffffffcf 2a 18 41 41 76
+7e ffffff8d ffffffb8 69 6d 16 ffffffc9 3a
+1b 48 ffffffd1 2a ffffff9c 42 70 ffffffe9
+77 ffffffdc 38 38 76 ffffffeb ffffffa0 ffffffcf
+ffffffbe ffffffc3 3e ffffff80 1e fffffffd 35 ffffff9b
+ffffffab 79 ffffffeb ffffff94 ffffff8c ffffffa6 ffffffff ffffffe3
+11 0 7a 2b a ffffffda 43 ffffff9e
+56 5d ffffffd8 ffffff9f ffffffb9 ffffffd0 3b ffffffa8
+fffffff3 19 29 6d d ffffff82 ffffff91 41
+fffffff5 ffffffc0 44 ffffffb9 4d 31 ffffffe8 ffffff8e
+7f 65 32 ffffffc7 14 ffffffe0 53 17
+46 1c ffffffb2 ffffff83 ffffffd3 ffffffd4 ffffffdc 47
+13 7f ffffffb8 fffffffa 4c 1a ffffffff fffffff0
+45 2a ffffffea ffffffdf 18 1 2c ffffffc4
+4c 3f 22 7 23 ffffff9b 48 ffffffdd
+2f ffffffe3 ffffffef ffffffed 2b 41 2c 35
+7 ffffffbf 13 2f 44 c 25 2f
+ffffff82 ffffff80 6 e 56 5d 72 d
+61 57 72 fffffff2 ffffff9d 55 ffffffca 77
+fffffffa 79 ffffffb5 ffffffe4 29 5e ffffffd3 fffffffa
+ffffffb6 ffffffa0 62 13 5c ffffffa0 ffffffac ffffff86
+ffffff94 ffffff88 ffffffc0 50 6f ffffff8c 64 fffffff0
+ffffffa5 73 49 ffffff91 ffffffec 55 ffffff80 6e
+ffffff8e ffffffa6 2c 71 35 72 79 1d
+9 ffffffea ffffffcc ffffffae fffffffc 1e 3c 7f
+64 b 3f ffffffaa ffffffc9 ffffffd8 ffffffa8 fffffff5
+0 5c ffffffd0 ffffffec 78 ffffffe3 13 49
+ffffffd3 32 7e ffffff9c ffffffb8 ffffffc7 ffffffc6 27
+ffffffe6 64 7b a ffffff8d ffffffce 7c ffffff9f
+ffffffd8 ffffffd2 ffffffad 27 ffffffce ffffff88 ffffffe7 ffffffa5
+5a ffffffdb 30 a ffffffa7 48 2b ffffff91
+ffffffb1 ffffffe5 ffffffd1 6c 19 ffffffa4 61 ffffffa0
+38 ffffffd8 ffffff95 2c 75 fffffff8 16 71
+ffffffdb ffffffa3 30 ffffffcd ffffffe5 ffffffe4 ffffffc9 ffffff88
+ffffff9c ffffffb6 ffffff8f fffffff3 ffffffe3 ffffffca 70 ffffffce
+11 ffffff87 4f ffffffea ffffffc0 51 fffffff3 f
+ffffffe4 d 43 1f 1e ffffffe5 ffffffb0 7a
+52 48 fffffff1 ffffffa4 76 34 fffffff6 25
+ffffffad ffffffb7 16 ffffffb0 ffffff94 ffffffb2 ffffff8a ffffff87
+ffffffda ffffffe0 1e 1d 16 16 25 fffffffc
+ffffffd4 ffffffcb ffffffac ffffffe9 fffffff0 ffffffdb fffffff3 45
+27 ffffff87 18 ffffffb5 ffffffea ffffffc0 15 5
+75 ffffffa4 ffffffec 49 20 48 20 45
+fffffff5 ffffffb8 67 e ffffff81 3b ffffff9c fffffff0
+ffffffef ffffffdb fffffffa ffffff92 52 23 ffffff87 58
+41 2a ffffffcd 8 ffffffa8 ffffffd0 ffffffcf ffffffaf
+ffffffdd 47 3b ffffffc5 fffffff1 ffffffd5 ffffffdb ffffff8f
+48 ffffffd7 51 ffffffc4 6c 8 3 73
+1d 3 53 23 ffffffac 6 13 3b
+ffffff88 fffffff8 38 ffffffa4 19 ffffffac ffffffcd ffffffac
+ffffffcc 67 29 2d 6e ffffff9f 63 ffffffee
+ffffffbe 5 6 48 3c ffffffc5 1 c
+47 c ffffffe1 ffffffa4 66 ffffffca 41 77
+ffffffe5 ffffffb9 ffffff80 ffffff92 ffffffa3 ffffff9c ffffffb4 ffffff84
+2a ffffffcc ffffffdf ffffff88 0 fffffff0 60 ffffffe9
+3c b ffffffac ffffffa2 5b ffffffbb 3d 44
+54 ffffffbe ffffffca 1c ffffffe9 ffffffb9 ffffffb7 ffffff94
+3f 34 ffffffce ffffffd9 ffffffb0 ffffffe9 2f ffffffbe
+ffffffe0 3d ffffff85 ffffffdf e e 7a 9
+ffffffac ffffffaf 6c ffffffd9 30 30 60 ffffffa2
+2c ffffffe2 36 ffffff94 ffffff9c 19 1e 19
+7e 33 4a ffffff82 ffffffa8 ffffffd9 ffffffe5 ffffffe2
+ffffffd5 ffffff84 43 3a 0 43 59 ffffffd6
+fffffff5 ffffffba 6e fffffff6 24 6d 12 ffffffaf
+ffffffb7 3e 4f 13 ffffffe7 34 1e ffffff8f
+ffffff8b 7d 1c ffffff94 fffffff1 ffffffb6 7d 7a
+fffffff1 68 40 ffffffa0 3e ffffffd5 ffffffa4 ffffffd7
+ffffffff fffffff5 ffffffda 0 ffffff9e ffffffbb fffffffb fffffff3
+ffffffde ffffff9c 3b ffffffa2 33 51 5f 7e
+4d ffffffda 6c 18 fffffff5 ffffffc6 ffffffa0 b
+1d ffffffb1 ffffffa6 1a 31 e 4 ffffff94
+ffffffb3 26 ffffffd7 ffffffff 6 60 ffffffc2 fffffff5
+ffffff89 ffffffc2 24 48 ffffffe7 ffffffb7 ffffff88 6c
+ffffffac 12 61 16 1c 53 fffffff6 20
+3f 28 ffffff9b ffffffaf 40 35 21 ffffff97
+fffffff7 17 ffffff8f fffffffd ffffffc4 ffffffa6 11 3d
+ffffff9e 7a 30 e 6b ffffffb0 43 ffffffe4
+ffffff91 ffffffee 24 ffffff95 ffffffcc ffffffa3 27 3f
+42 ffffff93 48 68 ffffffd4 ffffff92 ffffffa3 65
+ffffffb6 ffffff8f 28 0 41 ffffffd4 ffffff8e 54
+7 ffffff8b ffffff88 fffffffc 27 ffffff83 36 6c
+ffffffe3 34 ffffffde ffffff9e 6f 0 ffffffdb fffffff0
+b ffffffbb ffffffd4 4c 53 6d 31 ffffff89
+ffffffd5 56 ffffffcb 10 ffffffe4 31 ffffffe2 ffffffc2
+ffffffab ffffffbc 53 19 ffffff84 78 a ffffff8d
+ffffff8a ffffffad ffffffb4 38 6c ffffffb1 ffffffb9 ffffffbc
+ffffff84 68 69 64 27 e 75 ffffff89
+3e 33 ffffffa0 36 15 7 ffffffb5 e
+73 ffffffd7 ffffffbb 6e ffffffe9 ffffffd7 67 ffffffce
+6f 21 ffffffd1 6c 2c fffffffd 6a 2b
+ffffff94 63 2d ffffffb7 ffffffb8 ffffffbd 15 ffffffed
+ffffffd8 fffffff0 ffffffce 7a 3d ffffff9d ffffffaf ffffffc1
+45 ffffffa3 ffffffe6 2 ffffffbf ffffffe8 fffffff4 ffffffb7
+78 59 5c 41 16 2e ffffff96 ffffffc4
+23 72 4a 4e 6c ffffffc2 ffffffba 3e
+ffffff8c 54 7f ffffffe3 ffffffc3 3b 77 63
+b ffffffe8 fffffffd ffffffde 6d fffffff3 5b ffffffd2
+ffffff90 1b 7c ffffffc0 ffffff92 ffffff8b ffffffe5 f
+1a 5f ffffffe6 31 ffffffad 65 c 4
+41 27 ffffffd9 7a f 29 ffffffb6 7b
+ffffffad 6e 28 9 5b 41 42 ffffffa5
+ffffff9c 31 5a fffffff1 8 5c ffffffff ffffff96
+60 fffffff0 29 67 ffffffe3 ffffffee ffffffb2 ffffffc6
+ffffffdf 31 5 46 ffffff8a ffffffaf 14 ffffff91
+12 fffffffd ffffff8f ffffff8c fffffff1 18 52 ffffffb8
+ffffff86 61 1e ffffffdb ffffffe1 ffffffe9 ffffff8b ffffffde
+ffffffde ffffffef 3d fffffff9 74 ffffffa6 56 c
+4e 3a 2b 50 ffffff9b 15 39 2e
+22 5d 59 6e ffffff98 ffffffc1 33 ffffff94
+35 75 fffffff0 ffffff86 ffffff84 7a 33 72
+7a 22 49 ffffffee ffffffca ffffffd3 ffffff9e 60
+77 b 72 ffffff9f ffffffaa ffffffa3 ffffffcd ffffffda
+ffffffc5 57 ffffffb0 ffffffb8 ffffffb7 ffffff85 ffffff8c ffffffc1
+ffffff91 34 fffffff7 fffffffb 59 57 ffffff9d ffffffd8
+1e 53 74 4f 4c ffffffbf 33 48
+41 6a 4 3c 1f ffffffa1 77 1c
+ffffffe4 ffffffb1 ffffffba 72 ffffffb7 ffffffaa 7 ffffffc6
+ffffff83 66 5d 42 ffffffc9 ffffffc9 72 ffffff98
+ffffffb2 49 ffffffe7 23 63 ffffffb0 ffffffbd 4c
+ffffff94 20 7 2f 63 57 ffffffe1 7d
+65 34 ffffffa0 ffffffa3 fffffffe 7a 4a 2b
+fffffff2 ffffffd2 48 63 3b 16 59 3b
+1c ffffffcc ffffffca 73 76 fffffff0 ffffffe4 fffffff5
+59 fffffff5 ffffffa4 7f ffffffde e ffffffb1 ffffff84
+33 ffffffa9 ffffff8a 54 fffffff6 3b fffffffe 7a
+ffffffc7
 </a>
+      <a name="dataWidth" val="32"/>
     </comp>
     <comp lib="4" loc="(950,850)" name="RAM">
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="classic"/>
     </comp>
-    <wire from="(570,350)" to="(570,390)"/>
-    <wire from="(570,350)" to="(610,350)"/>
-    <wire from="(570,390)" to="(610,390)"/>
-    <wire from="(600,370)" to="(610,370)"/>
-    <wire from="(610,350)" to="(610,370)"/>
-    <wire from="(610,370)" to="(610,390)"/>
+    <comp loc="(330,0)" name="TopHat"/>
+    <comp loc="(580,40)" name="StanApproved"/>
+    <comp loc="(590,480)" name="Registers"/>
+    <comp loc="(810,460)" name="ALU"/>
+    <wire from="(280,450)" to="(290,450)"/>
+    <wire from="(310,460)" to="(590,460)"/>
+    <wire from="(310,480)" to="(370,480)"/>
+    <wire from="(310,500)" to="(370,500)"/>
+    <wire from="(340,540)" to="(340,710)"/>
+    <wire from="(340,540)" to="(370,540)"/>
+    <wire from="(340,710)" to="(550,710)"/>
+    <wire from="(350,430)" to="(350,560)"/>
+    <wire from="(350,430)" to="(820,430)"/>
+    <wire from="(350,560)" to="(370,560)"/>
+    <wire from="(360,580)" to="(370,580)"/>
+    <wire from="(550,710)" to="(550,750)"/>
+    <wire from="(550,710)" to="(590,710)"/>
+    <wire from="(550,750)" to="(590,750)"/>
+    <wire from="(580,730)" to="(590,730)"/>
+    <wire from="(590,710)" to="(590,730)"/>
+    <wire from="(590,710)" to="(740,710)"/>
+    <wire from="(590,730)" to="(590,750)"/>
+    <wire from="(740,540)" to="(740,710)"/>
+    <wire from="(740,540)" to="(840,540)"/>
+    <wire from="(810,460)" to="(820,460)"/>
+    <wire from="(820,430)" to="(820,460)"/>
   </circuit>
   <circuit name="HalfAdder">
     <a name="appearance" val="custom"/>
@@ -1315,5 +1405,791 @@ c7
     <wire from="(80,250)" to="(80,430)"/>
     <wire from="(80,430)" to="(300,430)"/>
     <wire from="(80,430)" to="(80,530)"/>
+  </circuit>
+  <circuit name="ALU">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="ALU"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
+      <circ-port height="10" pin="820,1020" width="10" x="265" y="55"/>
+      <circ-port height="8" pin="200,180" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="200,290" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="200,330" width="8" x="46" y="96"/>
+      <rect fill="none" height="61" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <rect height="4" stroke="none" width="10" x="50" y="98"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Result</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">Value2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">OpCode</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">Value1</text>
+      <text dominant-baseline="alphabetic" font-family="Dialog" font-size="40" font-weight="bold" text-anchor="middle" x="162" y="96">ALU</text>
+    </appear>
+    <comp lib="0" loc="(1070,590)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(200,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="OpCode"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(200,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Value1"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(200,330)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Value2"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(400,540)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="0" loc="(70,620)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(820,1020)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Result"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(1070,380)" name="XOR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(1300,430)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(1410,430)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(1530,430)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(800,380)" name="NOT Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(890,380)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(980,380)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(1300,700)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="south"/>
+      <a name="select" val="4"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(520,560)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="south"/>
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(940,740)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1190,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1290,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1390,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1510,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1630,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(1730,370)" name="Comparator">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(310,370)" name="Adder">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(410,370)" name="Subtractor">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(510,370)" name="Multiplier">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(610,370)" name="Divider">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(720,370)" name="Divider">
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(1310,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(1320,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(1330,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(1340,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(1350,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(1360,650)" name="OneBitTo16Bit">
+      <a name="facing" val="south"/>
+    </comp>
+    <wire from="(100,540)" to="(100,650)"/>
+    <wire from="(100,540)" to="(380,540)"/>
+    <wire from="(100,650)" to="(640,650)"/>
+    <wire from="(1060,300)" to="(1060,340)"/>
+    <wire from="(1060,300)" to="(1080,300)"/>
+    <wire from="(1070,380)" to="(1070,480)"/>
+    <wire from="(1070,480)" to="(1300,480)"/>
+    <wire from="(1070,590)" to="(1200,590)"/>
+    <wire from="(1080,300)" to="(1080,340)"/>
+    <wire from="(1080,300)" to="(1130,300)"/>
+    <wire from="(110,550)" to="(110,670)"/>
+    <wire from="(110,550)" to="(380,550)"/>
+    <wire from="(110,670)" to="(650,670)"/>
+    <wire from="(1110,320)" to="(1110,380)"/>
+    <wire from="(1110,320)" to="(1210,320)"/>
+    <wire from="(1110,380)" to="(1150,380)"/>
+    <wire from="(1130,300)" to="(1130,360)"/>
+    <wire from="(1130,300)" to="(1230,300)"/>
+    <wire from="(1130,360)" to="(1150,360)"/>
+    <wire from="(1190,370)" to="(1200,370)"/>
+    <wire from="(1200,370)" to="(1200,470)"/>
+    <wire from="(1200,470)" to="(1310,470)"/>
+    <wire from="(1200,590)" to="(1200,680)"/>
+    <wire from="(1200,680)" to="(1220,680)"/>
+    <wire from="(1210,320)" to="(1210,380)"/>
+    <wire from="(1210,320)" to="(1310,320)"/>
+    <wire from="(1210,380)" to="(1250,380)"/>
+    <wire from="(1230,300)" to="(1230,360)"/>
+    <wire from="(1230,300)" to="(1330,300)"/>
+    <wire from="(1230,360)" to="(1250,360)"/>
+    <wire from="(1270,510)" to="(1270,660)"/>
+    <wire from="(1280,500)" to="(1280,660)"/>
+    <wire from="(1290,370)" to="(1300,370)"/>
+    <wire from="(1290,490)" to="(1290,660)"/>
+    <wire from="(1300,370)" to="(1300,400)"/>
+    <wire from="(1300,430)" to="(1300,460)"/>
+    <wire from="(1300,460)" to="(1320,460)"/>
+    <wire from="(1300,480)" to="(1300,660)"/>
+    <wire from="(1310,320)" to="(1310,380)"/>
+    <wire from="(1310,320)" to="(1430,320)"/>
+    <wire from="(1310,380)" to="(1350,380)"/>
+    <wire from="(1310,470)" to="(1310,510)"/>
+    <wire from="(1310,650)" to="(1310,660)"/>
+    <wire from="(1320,460)" to="(1320,510)"/>
+    <wire from="(1320,650)" to="(1320,660)"/>
+    <wire from="(1330,300)" to="(1330,360)"/>
+    <wire from="(1330,300)" to="(1450,300)"/>
+    <wire from="(1330,360)" to="(1350,360)"/>
+    <wire from="(1330,480)" to="(1330,510)"/>
+    <wire from="(1330,480)" to="(1410,480)"/>
+    <wire from="(1330,650)" to="(1330,660)"/>
+    <wire from="(1340,490)" to="(1340,510)"/>
+    <wire from="(1340,490)" to="(1530,490)"/>
+    <wire from="(1340,650)" to="(1340,660)"/>
+    <wire from="(1350,500)" to="(1350,510)"/>
+    <wire from="(1350,500)" to="(1640,500)"/>
+    <wire from="(1350,650)" to="(1350,660)"/>
+    <wire from="(1360,510)" to="(1740,510)"/>
+    <wire from="(1360,650)" to="(1360,660)"/>
+    <wire from="(1390,360)" to="(1420,360)"/>
+    <wire from="(1390,370)" to="(1400,370)"/>
+    <wire from="(1400,370)" to="(1400,400)"/>
+    <wire from="(1410,430)" to="(1410,480)"/>
+    <wire from="(1420,360)" to="(1420,400)"/>
+    <wire from="(1430,320)" to="(1430,380)"/>
+    <wire from="(1430,320)" to="(1550,320)"/>
+    <wire from="(1430,380)" to="(1470,380)"/>
+    <wire from="(1450,300)" to="(1450,360)"/>
+    <wire from="(1450,300)" to="(1570,300)"/>
+    <wire from="(1450,360)" to="(1470,360)"/>
+    <wire from="(1510,370)" to="(1540,370)"/>
+    <wire from="(1510,380)" to="(1520,380)"/>
+    <wire from="(1520,380)" to="(1520,400)"/>
+    <wire from="(1530,430)" to="(1530,490)"/>
+    <wire from="(1540,370)" to="(1540,400)"/>
+    <wire from="(1550,320)" to="(1550,380)"/>
+    <wire from="(1550,320)" to="(1650,320)"/>
+    <wire from="(1550,380)" to="(1590,380)"/>
+    <wire from="(1570,300)" to="(1570,360)"/>
+    <wire from="(1570,300)" to="(1670,300)"/>
+    <wire from="(1570,360)" to="(1590,360)"/>
+    <wire from="(1630,360)" to="(1640,360)"/>
+    <wire from="(1640,360)" to="(1640,500)"/>
+    <wire from="(1650,320)" to="(1650,380)"/>
+    <wire from="(1650,320)" to="(1740,320)"/>
+    <wire from="(1650,380)" to="(1690,380)"/>
+    <wire from="(1670,300)" to="(1670,360)"/>
+    <wire from="(1670,300)" to="(1740,300)"/>
+    <wire from="(1670,360)" to="(1690,360)"/>
+    <wire from="(1730,380)" to="(1740,380)"/>
+    <wire from="(1740,380)" to="(1740,510)"/>
+    <wire from="(200,180)" to="(200,200)"/>
+    <wire from="(200,290)" to="(210,290)"/>
+    <wire from="(200,330)" to="(210,330)"/>
+    <wire from="(210,290)" to="(210,300)"/>
+    <wire from="(210,300)" to="(250,300)"/>
+    <wire from="(210,320)" to="(210,330)"/>
+    <wire from="(210,320)" to="(230,320)"/>
+    <wire from="(230,320)" to="(230,380)"/>
+    <wire from="(230,320)" to="(330,320)"/>
+    <wire from="(230,380)" to="(270,380)"/>
+    <wire from="(250,300)" to="(250,360)"/>
+    <wire from="(250,300)" to="(350,300)"/>
+    <wire from="(250,360)" to="(270,360)"/>
+    <wire from="(310,370)" to="(320,370)"/>
+    <wire from="(320,370)" to="(320,510)"/>
+    <wire from="(320,510)" to="(480,510)"/>
+    <wire from="(330,320)" to="(330,380)"/>
+    <wire from="(330,320)" to="(430,320)"/>
+    <wire from="(330,380)" to="(370,380)"/>
+    <wire from="(350,300)" to="(350,360)"/>
+    <wire from="(350,300)" to="(450,300)"/>
+    <wire from="(350,360)" to="(370,360)"/>
+    <wire from="(400,540)" to="(480,540)"/>
+    <wire from="(410,370)" to="(420,370)"/>
+    <wire from="(420,370)" to="(420,500)"/>
+    <wire from="(420,500)" to="(490,500)"/>
+    <wire from="(430,320)" to="(430,380)"/>
+    <wire from="(430,320)" to="(530,320)"/>
+    <wire from="(430,380)" to="(470,380)"/>
+    <wire from="(450,300)" to="(450,360)"/>
+    <wire from="(450,300)" to="(550,300)"/>
+    <wire from="(450,360)" to="(470,360)"/>
+    <wire from="(480,510)" to="(480,520)"/>
+    <wire from="(490,500)" to="(490,520)"/>
+    <wire from="(500,490)" to="(500,520)"/>
+    <wire from="(500,490)" to="(520,490)"/>
+    <wire from="(510,370)" to="(520,370)"/>
+    <wire from="(510,500)" to="(510,520)"/>
+    <wire from="(510,500)" to="(620,500)"/>
+    <wire from="(520,370)" to="(520,490)"/>
+    <wire from="(520,510)" to="(520,520)"/>
+    <wire from="(520,510)" to="(700,510)"/>
+    <wire from="(520,560)" to="(520,610)"/>
+    <wire from="(520,610)" to="(950,610)"/>
+    <wire from="(530,320)" to="(530,380)"/>
+    <wire from="(530,320)" to="(640,320)"/>
+    <wire from="(530,380)" to="(570,380)"/>
+    <wire from="(550,300)" to="(550,360)"/>
+    <wire from="(550,300)" to="(660,300)"/>
+    <wire from="(550,360)" to="(570,360)"/>
+    <wire from="(610,370)" to="(620,370)"/>
+    <wire from="(620,370)" to="(620,500)"/>
+    <wire from="(630,550)" to="(1050,550)"/>
+    <wire from="(630,550)" to="(630,630)"/>
+    <wire from="(640,320)" to="(1110,320)"/>
+    <wire from="(640,320)" to="(640,380)"/>
+    <wire from="(640,380)" to="(680,380)"/>
+    <wire from="(640,560)" to="(1050,560)"/>
+    <wire from="(640,560)" to="(640,650)"/>
+    <wire from="(650,570)" to="(1050,570)"/>
+    <wire from="(650,570)" to="(650,670)"/>
+    <wire from="(660,300)" to="(660,360)"/>
+    <wire from="(660,300)" to="(800,300)"/>
+    <wire from="(660,360)" to="(680,360)"/>
+    <wire from="(660,580)" to="(1050,580)"/>
+    <wire from="(660,580)" to="(660,690)"/>
+    <wire from="(70,200)" to="(200,200)"/>
+    <wire from="(70,200)" to="(70,620)"/>
+    <wire from="(700,390)" to="(700,510)"/>
+    <wire from="(800,300)" to="(800,350)"/>
+    <wire from="(800,300)" to="(880,300)"/>
+    <wire from="(800,380)" to="(800,510)"/>
+    <wire from="(800,510)" to="(1270,510)"/>
+    <wire from="(820,980)" to="(820,1020)"/>
+    <wire from="(820,980)" to="(940,980)"/>
+    <wire from="(880,300)" to="(880,350)"/>
+    <wire from="(880,300)" to="(900,300)"/>
+    <wire from="(890,380)" to="(890,500)"/>
+    <wire from="(890,500)" to="(1280,500)"/>
+    <wire from="(90,530)" to="(380,530)"/>
+    <wire from="(90,530)" to="(90,630)"/>
+    <wire from="(90,630)" to="(630,630)"/>
+    <wire from="(90,650)" to="(100,650)"/>
+    <wire from="(90,670)" to="(110,670)"/>
+    <wire from="(90,690)" to="(660,690)"/>
+    <wire from="(90,710)" to="(900,710)"/>
+    <wire from="(900,300)" to="(900,350)"/>
+    <wire from="(900,300)" to="(970,300)"/>
+    <wire from="(900,710)" to="(900,720)"/>
+    <wire from="(900,720)" to="(920,720)"/>
+    <wire from="(930,700)" to="(1300,700)"/>
+    <wire from="(930,700)" to="(930,710)"/>
+    <wire from="(940,740)" to="(940,980)"/>
+    <wire from="(950,610)" to="(950,710)"/>
+    <wire from="(970,300)" to="(970,350)"/>
+    <wire from="(970,300)" to="(990,300)"/>
+    <wire from="(980,380)" to="(980,490)"/>
+    <wire from="(980,490)" to="(1290,490)"/>
+    <wire from="(990,300)" to="(1060,300)"/>
+    <wire from="(990,300)" to="(990,350)"/>
+  </circuit>
+  <circuit name="OneBitTo16Bit">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="OneBitTo16Bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="187" y="57"/>
+      <circ-port height="10" pin="150,560" width="10" x="185" y="55"/>
+      <circ-port height="8" pin="130,250" width="8" x="46" y="56"/>
+      <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="120" x="60" y="50"/>
+      <rect height="20" stroke="none" width="120" x="60" y="50"/>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <rect height="4" stroke="none" width="10" x="180" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="175" y="64">Bit16</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">Bit</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="117" y="66">OneBitTo16Bit</text>
+    </appear>
+    <comp lib="0" loc="(130,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Bit"/>
+    </comp>
+    <comp lib="0" loc="(150,560)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Bit16"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(150,560)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(80,270)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <wire from="(130,270)" to="(130,290)"/>
+    <wire from="(130,290)" to="(130,310)"/>
+    <wire from="(130,310)" to="(130,330)"/>
+    <wire from="(130,330)" to="(130,350)"/>
+    <wire from="(130,350)" to="(130,370)"/>
+    <wire from="(130,370)" to="(130,390)"/>
+    <wire from="(130,390)" to="(130,410)"/>
+    <wire from="(130,410)" to="(130,430)"/>
+    <wire from="(130,430)" to="(130,450)"/>
+    <wire from="(130,450)" to="(130,470)"/>
+    <wire from="(130,470)" to="(130,490)"/>
+    <wire from="(130,490)" to="(130,510)"/>
+    <wire from="(130,510)" to="(130,530)"/>
+    <wire from="(130,530)" to="(130,550)"/>
+    <wire from="(80,270)" to="(130,270)"/>
+  </circuit>
+  <circuit name="Registers">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Registers"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(190,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Addr1"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Addr2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(190,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Addr3"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(190,380)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Clock"/>
+    </comp>
+    <comp lib="0" loc="(190,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="InValue"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(190,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WriteEnabled"/>
+    </comp>
+    <comp lib="0" loc="(740,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Out1"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(740,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Out2"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(740,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Out3"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(250,520)" name="Demultiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="south"/>
+      <a name="select" val="3"/>
+      <a name="selloc" val="tr"/>
+    </comp>
+    <comp lib="2" loc="(440,520)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="north"/>
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(550,520)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="north"/>
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(660,520)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="facing" val="north"/>
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,1040)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,1120)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,1210)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,640)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,720)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,800)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,880)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="4" loc="(390,960)" name="Register">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp loc="(320,240)" name="EightBitTo3"/>
+    <comp loc="(320,280)" name="EightBitTo3"/>
+    <comp loc="(320,320)" name="EightBitTo3"/>
+    <comp loc="(70,50)" name="StanApproved"/>
+    <wire from="(190,240)" to="(210,240)"/>
+    <wire from="(190,280)" to="(210,280)"/>
+    <wire from="(190,320)" to="(210,320)"/>
+    <wire from="(190,380)" to="(340,380)"/>
+    <wire from="(190,420)" to="(320,420)"/>
+    <wire from="(190,460)" to="(250,460)"/>
+    <wire from="(210,560)" to="(210,650)"/>
+    <wire from="(210,650)" to="(360,650)"/>
+    <wire from="(220,560)" to="(220,730)"/>
+    <wire from="(220,730)" to="(360,730)"/>
+    <wire from="(230,560)" to="(230,810)"/>
+    <wire from="(230,810)" to="(360,810)"/>
+    <wire from="(240,560)" to="(240,890)"/>
+    <wire from="(240,890)" to="(360,890)"/>
+    <wire from="(250,460)" to="(250,520)"/>
+    <wire from="(250,560)" to="(250,970)"/>
+    <wire from="(250,970)" to="(360,970)"/>
+    <wire from="(260,1050)" to="(360,1050)"/>
+    <wire from="(260,560)" to="(260,1050)"/>
+    <wire from="(270,1130)" to="(360,1130)"/>
+    <wire from="(270,560)" to="(270,1130)"/>
+    <wire from="(280,1220)" to="(360,1220)"/>
+    <wire from="(280,560)" to="(280,1220)"/>
+    <wire from="(290,540)" to="(400,540)"/>
+    <wire from="(320,1040)" to="(320,1120)"/>
+    <wire from="(320,1040)" to="(360,1040)"/>
+    <wire from="(320,1120)" to="(320,1210)"/>
+    <wire from="(320,1120)" to="(360,1120)"/>
+    <wire from="(320,1210)" to="(360,1210)"/>
+    <wire from="(320,240)" to="(400,240)"/>
+    <wire from="(320,280)" to="(510,280)"/>
+    <wire from="(320,320)" to="(620,320)"/>
+    <wire from="(320,420)" to="(320,640)"/>
+    <wire from="(320,640)" to="(320,720)"/>
+    <wire from="(320,640)" to="(360,640)"/>
+    <wire from="(320,720)" to="(320,800)"/>
+    <wire from="(320,720)" to="(360,720)"/>
+    <wire from="(320,800)" to="(320,880)"/>
+    <wire from="(320,800)" to="(360,800)"/>
+    <wire from="(320,880)" to="(320,960)"/>
+    <wire from="(320,880)" to="(360,880)"/>
+    <wire from="(320,960)" to="(320,1040)"/>
+    <wire from="(320,960)" to="(360,960)"/>
+    <wire from="(340,1070)" to="(340,1150)"/>
+    <wire from="(340,1070)" to="(370,1070)"/>
+    <wire from="(340,1150)" to="(340,1240)"/>
+    <wire from="(340,1150)" to="(370,1150)"/>
+    <wire from="(340,1240)" to="(370,1240)"/>
+    <wire from="(340,380)" to="(340,670)"/>
+    <wire from="(340,670)" to="(340,750)"/>
+    <wire from="(340,670)" to="(370,670)"/>
+    <wire from="(340,750)" to="(340,830)"/>
+    <wire from="(340,750)" to="(370,750)"/>
+    <wire from="(340,830)" to="(340,910)"/>
+    <wire from="(340,830)" to="(370,830)"/>
+    <wire from="(340,910)" to="(340,990)"/>
+    <wire from="(340,910)" to="(370,910)"/>
+    <wire from="(340,990)" to="(340,1070)"/>
+    <wire from="(340,990)" to="(370,990)"/>
+    <wire from="(370,1060)" to="(370,1070)"/>
+    <wire from="(370,1140)" to="(370,1150)"/>
+    <wire from="(370,1230)" to="(370,1240)"/>
+    <wire from="(370,660)" to="(370,670)"/>
+    <wire from="(370,740)" to="(370,750)"/>
+    <wire from="(370,820)" to="(370,830)"/>
+    <wire from="(370,900)" to="(370,910)"/>
+    <wire from="(370,980)" to="(370,990)"/>
+    <wire from="(390,1040)" to="(450,1040)"/>
+    <wire from="(390,1120)" to="(460,1120)"/>
+    <wire from="(390,1210)" to="(470,1210)"/>
+    <wire from="(390,640)" to="(400,640)"/>
+    <wire from="(390,720)" to="(410,720)"/>
+    <wire from="(390,800)" to="(420,800)"/>
+    <wire from="(390,880)" to="(430,880)"/>
+    <wire from="(390,960)" to="(440,960)"/>
+    <wire from="(400,240)" to="(400,540)"/>
+    <wire from="(400,560)" to="(400,640)"/>
+    <wire from="(400,640)" to="(510,640)"/>
+    <wire from="(410,560)" to="(410,720)"/>
+    <wire from="(410,720)" to="(520,720)"/>
+    <wire from="(420,560)" to="(420,800)"/>
+    <wire from="(420,800)" to="(530,800)"/>
+    <wire from="(430,560)" to="(430,880)"/>
+    <wire from="(430,880)" to="(540,880)"/>
+    <wire from="(440,240)" to="(440,520)"/>
+    <wire from="(440,240)" to="(740,240)"/>
+    <wire from="(440,560)" to="(440,960)"/>
+    <wire from="(440,960)" to="(550,960)"/>
+    <wire from="(450,1040)" to="(560,1040)"/>
+    <wire from="(450,560)" to="(450,1040)"/>
+    <wire from="(460,1120)" to="(570,1120)"/>
+    <wire from="(460,560)" to="(460,1120)"/>
+    <wire from="(470,1210)" to="(580,1210)"/>
+    <wire from="(470,560)" to="(470,1210)"/>
+    <wire from="(510,280)" to="(510,540)"/>
+    <wire from="(510,560)" to="(510,640)"/>
+    <wire from="(510,640)" to="(620,640)"/>
+    <wire from="(520,560)" to="(520,720)"/>
+    <wire from="(520,720)" to="(630,720)"/>
+    <wire from="(530,560)" to="(530,800)"/>
+    <wire from="(530,800)" to="(640,800)"/>
+    <wire from="(540,560)" to="(540,880)"/>
+    <wire from="(540,880)" to="(650,880)"/>
+    <wire from="(550,280)" to="(550,520)"/>
+    <wire from="(550,280)" to="(740,280)"/>
+    <wire from="(550,560)" to="(550,960)"/>
+    <wire from="(550,960)" to="(660,960)"/>
+    <wire from="(560,1040)" to="(670,1040)"/>
+    <wire from="(560,560)" to="(560,1040)"/>
+    <wire from="(570,1120)" to="(680,1120)"/>
+    <wire from="(570,560)" to="(570,1120)"/>
+    <wire from="(580,1210)" to="(690,1210)"/>
+    <wire from="(580,560)" to="(580,1210)"/>
+    <wire from="(620,320)" to="(620,540)"/>
+    <wire from="(620,560)" to="(620,640)"/>
+    <wire from="(630,560)" to="(630,720)"/>
+    <wire from="(640,560)" to="(640,800)"/>
+    <wire from="(650,560)" to="(650,880)"/>
+    <wire from="(660,320)" to="(660,520)"/>
+    <wire from="(660,320)" to="(740,320)"/>
+    <wire from="(660,560)" to="(660,960)"/>
+    <wire from="(670,560)" to="(670,1040)"/>
+    <wire from="(680,560)" to="(680,1120)"/>
+    <wire from="(690,560)" to="(690,1210)"/>
+  </circuit>
+  <circuit name="EightBitTo3">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="EightBitTo3"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="157" y="57"/>
+      <circ-port height="10" pin="190,270" width="10" x="155" y="55"/>
+      <circ-port height="8" pin="140,230" width="8" x="46" y="56"/>
+      <rect fill="none" height="20" stroke="#000000" stroke-width="2" width="100" x="60" y="50"/>
+      <rect height="2" stroke="none" width="0" x="150" y="60"/>
+      <rect height="20" stroke="none" width="100" x="60" y="50"/>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="145" y="64"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="110" y="65">EightBitTo3</text>
+    </appear>
+    <comp lib="0" loc="(140,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(140,230)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(190,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(190,270)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <wire from="(160,240)" to="(170,240)"/>
+    <wire from="(160,250)" to="(170,250)"/>
+    <wire from="(160,260)" to="(170,260)"/>
+  </circuit>
+  <circuit name="StanApproved">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="StanApproved"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
+      <rect fill="none" height="203" rx="20" ry="20" stroke="#ff0000" stroke-width="8" width="860" x="18" y="17"/>
+      <text dominant-baseline="central" fill="#fb7426" font-family="Times New Roman" font-size="128" text-anchor="middle" x="441" y="107">Stan Approved</text>
+    </appear>
+  </circuit>
+  <circuit name="TopHat">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="TopHat"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
+      <ellipse cx="122.0" cy="161.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="123.0" cy="178.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="124.0" cy="195.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="125.0" cy="210.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="125.0" cy="227.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="125.0" cy="240.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="138.0" cy="165.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="138.0" cy="180.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="139.0" cy="197.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="140.0" cy="213.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="141.0" cy="228.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="141.0" cy="243.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="154.0" cy="169.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="154.0" cy="184.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="154.0" cy="199.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="155.0" cy="215.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="156.0" cy="231.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="156.0" cy="245.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="169.0" cy="170.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="170.0" cy="185.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="170.0" cy="199.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="170.0" cy="214.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="171.0" cy="230.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="172.0" cy="245.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="185.0" cy="167.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="185.0" cy="183.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="186.0" cy="198.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="186.0" cy="212.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="188.0" cy="228.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="188.0" cy="243.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="200.0" cy="195.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="201.0" cy="163.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="201.0" cy="179.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="201.0" cy="210.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="202.0" cy="226.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="204.0" cy="240.5" fill="#f76a00" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="214.0" cy="160.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="214.0" cy="177.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="214.0" cy="207.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="215.0" cy="192.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="217.0" cy="223.5" rx="6.0" ry="5.5" stroke="none"/>
+      <ellipse cx="219.0" cy="237.5" rx="6.0" ry="5.5" stroke="none"/>
+      <path d="M105,271 Q131,269 105,92" fill="none" stroke="#000000"/>
+      <path d="M105,93 Q167,108 222,93" fill="none" stroke="#000000"/>
+      <path d="M106,93 Q179,57 222,94" fill="none" stroke="#000000"/>
+      <path d="M112,146 Q170,167 220,146" fill="none" stroke="#000000"/>
+      <path d="M118,241 Q178,262 225,240" fill="none" stroke="#000000"/>
+      <path d="M240,274 Q215,257 222,92" fill="none" stroke="#000000"/>
+      <path d="M254,283 Q262,274 252,269" fill="none" stroke="#000000"/>
+      <path d="M90,283 Q175,320 255,284" fill="none" stroke="#000000"/>
+      <path d="M92,283 Q88,273 97,268" fill="none" stroke="#000000"/>
+      <path d="M96,269 Q172,298 251,270" fill="none" stroke="#000000"/>
+      <polygon fill="#4d4d4d" points="114,148 148,155 172,157 201,153 221,147 221,201 224,226 226,240 188,251 172,252 148,249 119,241 119,218 117,189" stroke="none"/>
+    </appear>
   </circuit>
 </project>
